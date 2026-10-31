@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software and the original Planck data papers when using this work."
+type: software
+title: "CMB Anomaly Lab: Reproducible Planck Large-Angle Temperature Experiments"
+version: 0.1.0
+date-released: 2026-10-31
+authors:
+  - family-names: Jana
+    given-names: Biswajit
+repository-code: "https://github.com/Biswajit1999/cmb-anomaly-lab"
+url: "https://github.com/Biswajit1999/cmb-anomaly-lab"
+license: MIT
+keywords:
+  - cosmic microwave background
+  - Planck
+  - cosmic variance
+  - cosmology
+  - reproducible research

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmb-anomaly-lab"
+version = "0.1.0"
+description = "Reproducible Planck large-angle temperature anomaly experiments"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Biswajit Jana"}]
+license = {text = "MIT"}
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "matplotlib>=3.7,<4", "requests>=2.31,<3"]
+
+[project.optional-dependencies]
+maps = ["healpy>=1.17,<2", "astropy>=6,<8"]
+report = ["reportlab>=4,<6", "pypdf>=5,<7"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+cmb-lab = "cmb_lab.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

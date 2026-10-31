@@ -1,0 +1,11 @@
+{
+  "seed": 20261031,
+  "n_reference": 100000,
+  "n_calibration": 100000,
+  "lmax": 64,
+  "sensitivity_lmax": [32, 48, 64, 96, 128],
+  "parity_scan_lmax": [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+  "s_scan_angles_deg": [45, 50, 55, 60, 65, 70, 75, 80, 85, 90],
+  "conditional_ell": [2],
+  "status": "Retrospective, literature-motivated exploratory protocol. Not prospectively preregistered."
+}
