@@ -42,11 +42,20 @@ def fetch(root, include_map=False):
         else:
             print(f"Downloading {url}", flush=True)
             partial = dest.with_suffix(dest.suffix + ".part")
-            with requests.get(url, stream=True, timeout=(30, 180)) as response:
+            offset = partial.stat().st_size if partial.exists() else 0
+            headers = {"Range": f"bytes={offset}-"} if offset else {}
+            with requests.get(url, headers=headers, stream=True, timeout=(30, 180)) as response:
                 response.raise_for_status()
-                n = 0
-                mark = 0
-                with partial.open("wb") as out:
+                if offset and response.status_code == 206:
+                    if not response.headers.get("Content-Range", "").startswith(f"bytes {offset}-"):
+                        raise IOError("Unexpected resume byte range")
+                    mode = "ab"
+                    print(f"  Resuming at {offset / 1e6:.0f} MB", flush=True)
+                else:
+                    offset, mode = 0, "wb"
+                n = offset
+                mark = offset
+                with partial.open(mode) as out:
                     for chunk in response.iter_content(4 * 1024 * 1024):
                         out.write(chunk)
                         n += len(chunk)
@@ -54,7 +63,7 @@ def fetch(root, include_map=False):
                             print(f"  {n / 1e6:.0f} MB", flush=True)
                             mark = n
                 expected = response.headers.get("Content-Length")
-                if expected and n != int(expected):
+                if expected and n - offset != int(expected):
                     raise IOError("Truncated download")
             partial.replace(dest)
             digest = sha256(dest)

@@ -47,7 +47,7 @@ def make_plots(out, ell, obs, theory, cal, cal_m, cond_m, r, effects, kernel):
     ax.plot(theta, matrix @ obs, c=RED, label="From published TT spectrum")
     ax.axhline(0, color=INK, lw=.5)
     ax.axvline(60, ls="--", c=INK, lw=.7)
-    ax.set(xlabel="Angular separation [degrees]", ylabel=r"$C(\theta)$ [$\mu$K$^2$]", title=r"Correlation reconstructed from the spectrum ($2\leq\ell\leq64$)", xlim=(0, 180), ylim=(-900, 2200))
+    ax.set(xlabel="Angular separation [degrees]", ylabel=r"$C(\theta)$ [$\mu$K$^2$]", title=rf"Correlation reconstructed from the spectrum ($2\leq\ell\leq{ell[-1]}$)", xlim=(0, 180))
     ax.legend(fontsize=8, loc="upper right")
     save(fig, folder, "correlation")
 

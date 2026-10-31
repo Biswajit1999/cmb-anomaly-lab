@@ -18,6 +18,12 @@ from .statistics import (NAMES, dl_to_cl, s_kernel, s_stat, metrics, parity,
 def run(root, config, out):
     start = time.perf_counter()
     root, out = Path(root), Path(out)
+    if config.get("conditional_ell") != [2]:
+        raise ValueError("This protocol supports conditioning on ell=2 only")
+    if min(config["n_reference"], config["n_calibration"]) < 1000:
+        raise ValueError("Use at least 1,000 spectra per batch for the tail diagnostics")
+    if config["lmax"] < 29 or max(config["parity_scan_lmax"]) > config["lmax"]:
+        raise ValueError("The analysis band must include all fixed and scanned multipoles")
     out.mkdir(parents=True, exist_ok=True)
     maxell = max(config["sensitivity_lmax"] + [config["lmax"]])
     obs_table, theory_table = load_spectra(root, maxell)
@@ -113,7 +119,8 @@ def run(root, config, out):
         "python": platform.python_version(), "platform": platform.platform(), "git_commit_at_run": commit,
         "packages": {p: importlib.metadata.version(p) for p in ("numpy", "scipy", "matplotlib", "requests")},
         "source_sha256": {str(p.relative_to(root)).replace("\\", "/"): sha256(p) for p in files},
-        "input_manifest_sha256": sha256(root / "data/manifest.json"),
+        "input_products": {k: json.loads((root / "data/manifest.json").read_text())[k]
+                           for k in ("observed", "theory")},
         "seed_streams": [s.spawn_key for s in streams]}
     np.savez_compressed(out / "simulation_metrics.npz", reference=ref_m, calibration=cal_m,
                         conditional=cond_m, names=NAMES)
