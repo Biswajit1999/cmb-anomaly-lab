@@ -57,12 +57,15 @@ python -m pip install -e '.[dev,report]'
 python scripts/download_data.py
 python -m pytest -q
 OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 cmb-lab
+python scripts/validate_run.py
 python scripts/build_report.py
 ```
 
 On Windows PowerShell activate with `.venv\Scripts\Activate.ps1`, set `$env:OMP_NUM_THREADS='2'` and `$env:OPENBLAS_NUM_THREADS='2'`, then run `cmb-lab`. The environment variables only limit CPU threading.
 
 A quick execution check uses `cmb-lab --quick` and writes to `results/quick`, leaving the baseline intact. The committed configuration is [config/analysis.json](config/analysis.json). Use `--config` and `--output` for separate experiments. Cached text inputs are checked against SHA-256 hashes before use. An exact version snapshot from the executed Linux environment is in [requirements-lock.txt](requirements-lock.txt).
+
+The ten numerical tests pass. A further **100,000 spectra with an independent seed** reproduce all four primary marginal probabilities within 1.53 combined Monte Carlo standard deviations; see [validation.json](results/validation.json). This is a stability check, not additional observational evidence.
 
 ### Original map and simulated skies
 

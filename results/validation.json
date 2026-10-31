@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "source_and_input_hashes_verified": true,
+  "independent_seed": 904210,
+  "n_independent_spectra": 100000,
+  "checks": {
+    "quadrupole": {
+      "baseline_p": 0.04698953010469895,
+      "independent_seed": {
+        "p": 0.04555954440455595,
+        "hits": 4555,
+        "n": 100000,
+        "ci95": [
+          0.04426587987471961,
+          0.04686056089049459
+        ]
+      },
+      "difference_in_combined_mc_sd": 1.5220765007242198
+    },
+    "s_half": {
+      "baseline_p": 0.07520924790752093,
+      "independent_seed": {
+        "p": 0.07628923710762893,
+        "hits": 7628,
+        "n": 100000,
+        "ci95": [
+          0.07464208722709954,
+          0.07794253869588615
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.9126857386434774
+    },
+    "parity_2_29": {
+      "baseline_p": 0.01010989890101099,
+      "independent_seed": {
+        "p": 0.01037989620103799,
+        "hits": 1037,
+        "n": 100000,
+        "ci95": [
+          0.009751356834468936,
+          0.011017283752705533
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.599552376970231
+    },
+    "variance_2_29": {
+      "baseline_p": 0.1035289647103529,
+      "independent_seed": {
+        "p": 0.1026889731102689,
+        "hits": 10268,
+        "n": 100000,
+        "ci95": [
+          0.10080521322966196,
+          0.10457786676201165
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.6176497884302223
+    }
+  },
+  "scope": "Primary marginal probabilities only; not a second independent observation"
+}

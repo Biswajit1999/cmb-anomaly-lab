@@ -1,0 +1,20 @@
+{
+  "observed": {
+    "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_PowerSpect_CMB-TT-full_R3.01.txt",
+    "path": "data/raw/COM_PowerSpect_CMB-TT-full_R3.01.txt",
+    "sha256": "ccf3113604020536f6f13ccf51680a7316ad0f32da558eee7f625e613bdd5522",
+    "bytes": 170547,
+    "retrieved_utc": "2026-10-31T07:43:12.857968+00:00",
+    "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
+    "kind": "published TT spectrum estimate"
+  },
+  "theory": {
+    "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/ancillary-data/cosmoparams/COM_PowerSpect_CMB-base-plikHM-TTTEEE-lowl-lowE-lensing-minimum-theory_R3.01.txt",
+    "path": "data/raw/COM_PowerSpect_CMB-base-plikHM-TTTEEE-lowl-lowE-lensing-minimum-theory_R3.01.txt",
+    "sha256": "50eecd4422e22026070bdacf9fa8a7e7ef3badf4fa50fffea040df669715cf51",
+    "bytes": 205647,
+    "retrieved_utc": "2026-10-31T07:43:14.913032+00:00",
+    "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
+    "kind": "best-fit LCDM theoretical D_ell"
+  }
+}

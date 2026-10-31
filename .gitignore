@@ -8,5 +8,6 @@ dist/
 data/raw/*.fits
 data/raw/*.part
 results/**/*.npz
+results/quick/
 tmp/
 .DS_Store
