@@ -78,7 +78,8 @@ def pvalue(key):
 
 text("CMB Anomaly Lab", "title")
 text("Five questions about the largest patterns in the oldest light", "h1")
-text("Biswajit Jana | Research report v0.1.0 | 31 October 2026", "h2")
+text("Biswajit Jana | Research report v0.1.0 | 1 November 2026", "h2")
+text("Numerical analysis and literature search: 31 October 2026.", "small")
 text("Original Planck data. Mathematical physics. Reproducible simulation.")
 figure("results/maps/planck_temperature.png", "ESA / Planck Collaboration SMICA temperature measurement, displayed with its confidence mask. Grey regions are excluded from the display.", 250)
 text("The scientific question", "h2")

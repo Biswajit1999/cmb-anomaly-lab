@@ -8,7 +8,7 @@ This project downloads official **Planck 2018 (PR3)** numerical data, runs repro
 
 **Status: exploratory research and reproduction, not a discovery of new physics.** The numerical probabilities use a full-sky, noise-free Gaussian reference for published spectrum estimates. This is not a reproduction of the masked-sky Planck likelihood pipeline. Spectral anomalies alone do not establish a preferred direction in space.
 
-![Large-angle temperature power](results/baseline/figures/spectrum.png)
+![Measured Planck SMICA temperature with confidence masking](results/maps/planck_temperature.png)
 
 ## Read the work
 

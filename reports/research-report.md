@@ -2,9 +2,13 @@
 
 ## Five questions about the largest patterns in the oldest light
 
-### Biswajit Jana | Research report v0.1.0 | 31 October 2026
+### Biswajit Jana | Research report v0.1.0 | 1 November 2026
+
+Numerical analysis and literature search: 31 October 2026.
 
 Original Planck data. Mathematical physics. Reproducible simulation.
+
+![ESA / Planck Collaboration SMICA temperature measurement, displayed with its confidence mask. Grey regions are excluded from the display.](../results/maps/planck_temperature.png)
 
 ### The scientific question
 
@@ -121,6 +125,8 @@ The useful next question is whether a prespecified cancellation diagnostic retai
 ## 07 / Physics beyond the first experiment
 
 A physical explanation must predict more than a small number. A primordial-power modification changes C-ell through a transfer integral: C-ell = 4 pi integral d ln k P_R(k) Delta_T,ell(k)^2. A viable model must also predict TE and EE and survive parameter-fitting penalties. Directly suppressing selected C-ell values is only a toy model.
+
+![Four separately generated Gaussian LCDM skies. These are explicitly simulated; they are not the observed Planck image or a search over selected extreme skies.](../results/maps/simulated_skies.png)
 
 | Candidate explanation | Necessary discrimination |
 | --- | --- |

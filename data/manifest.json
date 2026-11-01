@@ -16,5 +16,14 @@
     "retrieved_utc": "2026-10-31T07:43:14.913032+00:00",
     "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
     "kind": "best-fit LCDM theoretical D_ell"
+  },
+  "smica": {
+    "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "path": "data/raw/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "sha256": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac",
+    "bytes": 2013312960,
+    "retrieved_utc": "2026-10-31T20:03:59.443003+00:00",
+    "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
+    "kind": "component-separated sky map"
   }
 }

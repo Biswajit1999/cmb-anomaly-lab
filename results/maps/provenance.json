@@ -1,0 +1,17 @@
+{
+  "source_sha256": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac",
+  "source_url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+  "input_header": {
+    "ORDERING": "NESTED",
+    "NSIDE": 2048,
+    "COORDSYS": "GALACTIC",
+    "POLCCONV": "COSMO"
+  },
+  "input_temperature_unit": "K_CMB",
+  "display_nside": 256,
+  "display_mask_min_fraction": 0.95,
+  "display_retained_fraction": 0.8376681009928385,
+  "map_used_for_significance": false,
+  "illustrative_simulation_seed": 20261032,
+  "healpy_version": "1.20.1"
+}

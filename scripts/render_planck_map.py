@@ -39,7 +39,7 @@ fig = plt.figure(figsize=(11, 5.7))
 hp.mollview(visible, fig=fig.number, min=-300, max=300, cmap="RdBu_r", badcolor="#d5d9db",
             title="Planck 2018 / SMICA temperature", unit=r"$\Delta T$ [$\mu$K]", coord="G")
 hp.graticule(dpar=30, dmer=60, alpha=.25)
-fig.text(.5, .03, "Measured component-separated sky | Galactic coordinates | Grey: confidence mask\nPixel averaging to NSIDE 256 for display; this image is not used for the spectral p-values.", ha="center", fontsize=9)
+fig.text(.5, -.09, "Measured component-separated sky | Galactic coordinates | Grey: confidence mask\nPixel averaging to NSIDE 256 for display; this image is not used for the spectral p-values.", ha="center", fontsize=9)
 fig.savefig(out / "planck_temperature.png", dpi=180, bbox_inches="tight")
 plt.close(fig)
 
@@ -58,8 +58,8 @@ for index in range(4):
     sky = hp.alm2map(alm, nside=64, lmax=128, fwhm=np.deg2rad(5), pol=False)
     hp.mollview(sky, fig=fig.number, sub=(2, 2, index + 1), min=-120, max=120, cmap="RdBu_r",
                 title=f"Gaussian LCDM realization {index + 1}", unit=r"$\mu$K", cbar=True)
-fig.suptitle("Different patterns from the same cosmology", y=.97, fontsize=16)
-fig.text(.5, .035, "Simulated, not observed | ell = 2-128 | 5 degree Gaussian smoothing | seed 20261032", ha="center", fontsize=9)
+fig.suptitle("Different patterns from the same cosmology", y=1.08, fontsize=16)
+fig.text(.5, -.09, "Simulated, not observed | ell = 2-128 | 5 degree Gaussian smoothing | seed 20261032", ha="center", fontsize=9)
 fig.savefig(out / "simulated_skies.png", dpi=180, bbox_inches="tight")
 plt.close(fig)
 (out / "provenance.json").write_text(json.dumps({"source_sha256": record["sha256"], "source_url": record["url"],

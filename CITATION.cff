@@ -3,7 +3,7 @@ message: "Please cite this software and the original Planck data papers when usi
 type: software
 title: "CMB Anomaly Lab: Reproducible Planck Large-Angle Temperature Experiments"
 version: 0.1.0
-date-released: 2026-10-31
+date-released: 2026-11-01
 authors:
   - family-names: Jana
     given-names: Biswajit
