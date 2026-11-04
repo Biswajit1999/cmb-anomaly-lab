@@ -28,7 +28,7 @@ This proximity is an interesting **post-result observation**, not evidence for f
 
 An arbitrary multiplicative cutoff imposed directly on C-ell is only a phenomenological toy. It is not automatically a consistent inflationary model. A physical primordial modification must be propagated through transfer functions and polarization predictions. No mechanism in this table is established by the current run.
 
-## Concrete next milestone: map-and-mask closure
+## Map-and-mask closure: implemented scope in v0.2.0
 
 1. Freeze the estimator and cuts in a versioned protocol before looking at new diagnostic results.
 2. Process SMICA, Commander, NILC and SEVEM with their documented beams and appropriate common masks. Use harmonic smoothing before resolution degradation; track pixel windows.
@@ -38,7 +38,17 @@ An arbitrary multiplicative cutoff imposed directly on C-ell is only a phenomeno
 6. Report full-sky and cut-sky results side by side. A disagreement is information about the estimator and sky region, not permission to choose the smallest p.
 7. Extend to polarization only after using the joint TT/TE/EE covariance and measurement noise. Conditioning on temperature is essential; TE couples the observables.
 
-The present download and map renderer are ready for this work, but a validated masked-sky inference pipeline has **not** been implemented or run in version 0.1.0. Neither cold-spot wavelets nor quadrupole-octopole alignment are claimed as measured here.
+Version 0.2.0 executes a defined subset of this broader programme: native-resolution SMICA harmonic extraction, beam/pixel processing, a matched mask and nuisance projection, finite-band pair-normalized correlation, pseudo-parity, variance and a calibrated finite hemisphere-direction search. It runs 8,192 primary Gaussian skies and 2,048 independent validation skies. Analytic projected-variance closure and independent pixel-pair tests verify the stated CMB-only numerical model. [Methods](map-methods.md) and [results](../results/masked_sky/SUMMARY.md).
+
+The multi-product foreground/noise and end-to-end simulation components above are not part of the executed study. Neither cold-spot wavelets nor quadrupole-octopole alignment are claimed as measured here. These boundaries describe what the completed experiment can establish; they are not missing computations hidden behind its p-values.
+
+## H4. A primordial suppression can improve fit after paying for parameter search
+
+**Implemented:** a positive primordial power suppression is propagated through CAMB scalar transfer functions to TT, TE and EE. A finite grid contains 161 distinct models; the ideal TT likelihood proxy uses ell=2-29. The entire fit is repeated on 100,000 Gaussian null spectra.
+
+**Finding:** the best fit improves 2 Delta ln L by about 1.026, with a calibrated p near 0.265. The experiment gives no compelling preference for this family. Background cosmological parameters are fixed, and the released TT estimates are not the official joint likelihood. The amplitude optimum is at the boundary and is not a confidence interval or a detection of an inflationary feature. [Derivation](primordial-model.md).
+
+**Discriminating consequence:** the same transfer calculation supplies TE and EE and the conditional expectation of EE given TT. These are exported predictions, not fitted polarization observations. A model cannot reduce temperature power independently of its polarization consequences.
 
 ## What would justify claiming a discovery?
 

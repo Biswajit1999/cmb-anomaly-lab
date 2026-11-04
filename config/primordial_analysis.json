@@ -1,0 +1,13 @@
+{
+  "seed": 20261104,
+  "n_calibration": 100000,
+  "fit_lmin": 2,
+  "fit_lmax": 29,
+  "prediction_lmax": 128,
+  "cutoff_min_mpc_inverse": 0.00003,
+  "cutoff_max_mpc_inverse": 0.0008,
+  "cutoff_count": 16,
+  "amplitude_steps": 11,
+  "cosmology": {"H0": 67.36, "ombh2": 0.02237, "omch2": 0.12, "mnu": 0.06, "omk": 0.0, "tau": 0.0544, "As": 2.1e-9, "ns": 0.9649},
+  "status": "Retrospective phenomenological model test. Fixed background near Planck 2018; ideal full-sky TT likelihood proxy, not the official likelihood or an inflationary potential reconstruction."
+}

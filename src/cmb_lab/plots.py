@@ -2,6 +2,7 @@
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import scienceplots  # noqa: F401; registers the scientific styles
 import numpy as np
 from .statistics import NAMES, correlation_matrix, s_stat
 
@@ -9,10 +10,12 @@ INK, BLUE, RED = "#182f40", "#287f91", "#bf593d"
 
 
 def style():
-    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10,
+    plt.style.use(["science", "no-latex", "bright"])
+    plt.rcParams.update({"font.family": "serif", "font.size": 10,
         "axes.spines.top": False, "axes.spines.right": False,
         "axes.labelcolor": INK, "text.color": INK, "axes.titleweight": "bold",
-        "figure.facecolor": "white", "savefig.facecolor": "white", "savefig.dpi": 180})
+        "figure.facecolor": "white", "savefig.facecolor": "white", "savefig.dpi": 240,
+        "pdf.fonttype": 42, "ps.fonttype": 42})
 
 
 def save(fig, folder, name):

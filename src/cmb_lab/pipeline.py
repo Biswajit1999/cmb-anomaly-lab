@@ -117,7 +117,7 @@ def run(root, config, out):
     files = sorted((root / "src/cmb_lab").glob("*.py"))
     results["provenance"] = {"created_utc": datetime.now(timezone.utc).isoformat(),
         "python": platform.python_version(), "platform": platform.platform(), "git_commit_at_run": commit,
-        "packages": {p: importlib.metadata.version(p) for p in ("numpy", "scipy", "matplotlib", "requests")},
+        "packages": {p: importlib.metadata.version(p) for p in ("numpy", "scipy", "matplotlib", "requests", "SciencePlots")},
         "source_sha256": {str(p.relative_to(root)).replace("\\", "/"): sha256(p) for p in files},
         "input_products": {k: json.loads((root / "data/manifest.json").read_text())[k]
                            for k in ("observed", "theory")},

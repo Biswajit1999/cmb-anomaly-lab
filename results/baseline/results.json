@@ -549,21 +549,24 @@
     "interpretation": "Algebraic counterfactual; neither a new cosmology nor parameter inference"
   },
   "provenance": {
-    "created_utc": "2026-10-31T19:54:40.796063+00:00",
+    "created_utc": "2026-11-04T09:18:08.863767+00:00",
     "python": "3.10.6",
     "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
-    "git_commit_at_run": "dcdc03f5b7a653a31d373872ed8ab313ae33264c",
+    "git_commit_at_run": "1829e8720317dc7992fc5ddbc6dd979b5d9c6f4b",
     "packages": {
       "numpy": "2.2.6",
       "scipy": "1.15.3",
       "matplotlib": "3.10.9",
-      "requests": "2.34.2"
+      "requests": "2.34.2",
+      "SciencePlots": "2.2.2"
     },
     "source_sha256": {
-      "src/cmb_lab/__init__.py": "c66d16d192b84af541ea02ba983cf2aad39ff7b9fd6fe4e0f5671e39e9386340",
+      "src/cmb_lab/__init__.py": "9bc00267156febadb008f91bf7aea0ee3a26dc0e201dc7a04d6a2d148d4ed205",
       "src/cmb_lab/data.py": "89781545580a0f94c6139ede42fd2fa8f86157ea54f5532872898ae6bf5ba5f9",
-      "src/cmb_lab/pipeline.py": "7cd43efbf0dac897e68ff86682e05161fb9303dc3a38ff7b8281a5d6cb1031bb",
-      "src/cmb_lab/plots.py": "e348cf1f7f836ff49631d56836b2ec309d67f8754fc56e643d43a889fe8a08db",
+      "src/cmb_lab/map_statistics.py": "6dba14ef617e79eca15549487b3716989374f6027ae5f8813a62b89675068e92",
+      "src/cmb_lab/pipeline.py": "e37e7aabe5f5c50fa92787ec12e294d78da3d835803a2e7ca41de911cbee1666",
+      "src/cmb_lab/plots.py": "fe291975dc36755c16a615cf8c43bc4fbb4904c481fac5dc9251a2804ffcce21",
+      "src/cmb_lab/primordial.py": "b2b46e44a973bb350239b9b55070a66255c7ea0d532337bd0d54119b04ad4a0d",
       "src/cmb_lab/statistics.py": "24b22e2b526ea05f75c5b372b9ec6bb53a7ecdc8c4c1516f36d7d6d18991249e"
     },
     "input_products": {
@@ -595,5 +598,5 @@
       ]
     ]
   },
-  "elapsed_seconds": 14.21312232999999
+  "elapsed_seconds": 19.815799823999996
 }

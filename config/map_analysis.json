@@ -1,0 +1,16 @@
+{
+  "seed": 20261102,
+  "n_reference": 4096,
+  "n_calibration": 4096,
+  "input_lmax": 128,
+  "nside": 32,
+  "correlation_lmax": 95,
+  "smoothing_fwhm_deg": 5.0,
+  "mask_min_fraction": 0.95,
+  "axis_nside": 2,
+  "robustness": [
+    {"name": "stricter_mask", "mask_min_fraction": 0.99, "smoothing_fwhm_deg": 5.0},
+    {"name": "broader_smoothing", "mask_min_fraction": 0.95, "smoothing_fwhm_deg": 8.0}
+  ],
+  "status": "Retrospective exploratory protocol; fixed before executing this map ensemble. Four diagnostic types and two robustness variants form one 12-column calibrated family."
+}

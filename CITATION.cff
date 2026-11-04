@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "Please cite this software and the original Planck data papers when using this work."
 type: software
 title: "CMB Anomaly Lab: Reproducible Planck Large-Angle Temperature Experiments"
-version: 0.1.0
-date-released: 2026-11-01
+version: 0.2.0
+date-released: 2026-11-04
 authors:
   - family-names: Jana
     given-names: Biswajit
@@ -16,3 +16,7 @@ keywords:
   - cosmic variance
   - cosmology
   - reproducible research
+  - CMB anomalies
+  - HEALPix
+  - primordial power spectrum
+  - CAMB

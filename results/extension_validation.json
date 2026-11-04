@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "source_hashes_verified": true,
+  "independent_seed": 731444,
+  "independent_maps": 2048,
+  "checks": {
+    "cut_sky_s_half": {
+      "repeat": {
+        "p": 0.009272816007808687,
+        "hits": 18,
+        "n": 2048,
+        "ci95": [
+          0.005217034943368644,
+          0.013855064316524354
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.4801496885169643
+    },
+    "masked_variance": {
+      "repeat": {
+        "p": 0.040995607613469986,
+        "hits": 83,
+        "n": 2048,
+        "ci95": [
+          0.032406701360771464,
+          0.04999413074847529
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.4970363125234698
+    },
+    "pseudo_parity": {
+      "repeat": {
+        "p": 0.021473889702293802,
+        "hits": 43,
+        "n": 2048,
+        "ci95": [
+          0.015235635657066591,
+          0.02817830770669967
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.7624393253428059
+    },
+    "hemisphere_max_contrast": {
+      "repeat": {
+        "p": 0.07808687164470474,
+        "hits": 159,
+        "n": 2048,
+        "ci95": [
+          0.06641400308443364,
+          0.09008532770557182
+        ]
+      },
+      "difference_in_combined_mc_sd": 0.3371525299303071
+    }
+  },
+  "numerical_convergence": {
+    "L64_relative_to_L95": {
+      "cut_sky_s_half": 8.460480760530409e-05,
+      "masked_variance": 0.0,
+      "pseudo_parity": -3.3306690738754696e-16,
+      "hemisphere_max_contrast": 0.0
+    },
+    "Nside64_quadrature_relative_to_Nside32": {
+      "cut_sky_s_half": -0.0016580953251986719,
+      "masked_variance": 9.173130229434001e-05,
+      "pseudo_parity": -5.6913786425139e-05,
+      "hemisphere_max_contrast": 0.0018139316039063047
+    },
+    "scope": "Numerical estimator sensitivity with fixed smoothed harmonic sky and same mask footprint; not an independently recalibrated significance or a native-mask-resolution test."
+  },
+  "scope": "Numerical validation of the stated models; does not validate absent foreground, noise or parameter uncertainty."
+}

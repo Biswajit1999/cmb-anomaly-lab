@@ -1,0 +1,290 @@
+{
+  "config": {
+    "seed": 20261102,
+    "n_reference": 4096,
+    "n_calibration": 4096,
+    "input_lmax": 128,
+    "nside": 32,
+    "correlation_lmax": 95,
+    "smoothing_fwhm_deg": 5.0,
+    "mask_min_fraction": 0.95,
+    "axis_nside": 2,
+    "robustness": [
+      {
+        "name": "stricter_mask",
+        "mask_min_fraction": 0.99,
+        "smoothing_fwhm_deg": 5.0
+      },
+      {
+        "name": "broader_smoothing",
+        "mask_min_fraction": 0.95,
+        "smoothing_fwhm_deg": 8.0
+      }
+    ],
+    "status": "Retrospective exploratory protocol; fixed before executing this map ensemble. Four diagnostic types and two robustness variants form one 12-column calibrated family."
+  },
+  "variants": {
+    "baseline": {
+      "settings": {
+        "name": "baseline",
+        "mask_min_fraction": 0.95,
+        "smoothing_fwhm_deg": 5.0
+      },
+      "f_sky": 0.8118489583333334,
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 2036.8056017035017,
+          "tail": "lower",
+          "p": 0.008054674151818403,
+          "hits": 32,
+          "n": 4096,
+          "ci95": [
+            0.005349704647585767,
+            0.011011168204278781
+          ]
+        },
+        "masked_variance": {
+          "observed": 1590.5224597111323,
+          "tail": "lower",
+          "p": 0.04369050524774225,
+          "hits": 178,
+          "n": 4096,
+          "ci95": [
+            0.03741887596103993,
+            0.050156704628523015
+          ]
+        },
+        "pseudo_parity": {
+          "observed": 0.7624026736607924,
+          "tail": "lower",
+          "p": 0.018550158652672687,
+          "hits": 75,
+          "n": 4096,
+          "ci95": [
+            0.01442895004305957,
+            0.022899003396203203
+          ]
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.31084859602326814,
+          "tail": "upper",
+          "p": 0.08054674151818404,
+          "hits": 329,
+          "n": 4096,
+          "ci95": [
+            0.07217830716617371,
+            0.08907056200303796
+          ]
+        }
+      },
+      "family": {
+        "p": 0.03148645350256285,
+        "hits": 128,
+        "n": 4096,
+        "ci95": [
+          0.026136084358227417,
+          0.03704599498741056
+        ],
+        "min_local_p": 0.007566512082011228,
+        "n_tests": 4
+      },
+      "variance_closure": {
+        "analytic": 2087.657814809686,
+        "simulation_mean": 2089.5817243425627,
+        "standard_errors": 0.3555707893665821
+      },
+      "quadrature_relative_change": 4.50195436485501e-13,
+      "axis_count": 24,
+      "maximizing_axis_galactic_lon_lat_deg": [
+        67.5,
+        41.81031489577859
+      ]
+    },
+    "stricter_mask": {
+      "settings": {
+        "name": "stricter_mask",
+        "mask_min_fraction": 0.99,
+        "smoothing_fwhm_deg": 5.0
+      },
+      "f_sky": 0.7841796875,
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 1985.1075995427964,
+          "tail": "lower",
+          "p": 0.006590187942396876,
+          "hits": 26,
+          "n": 4096,
+          "ci95": [
+            0.004150566575075981,
+            0.00928704679906851
+          ]
+        },
+        "masked_variance": {
+          "observed": 1582.4886601721898,
+          "tail": "lower",
+          "p": 0.041737856968513544,
+          "hits": 170,
+          "n": 4096,
+          "ci95": [
+            0.035602851788245994,
+            0.048069673062738065
+          ]
+        },
+        "pseudo_parity": {
+          "observed": 0.7746714395826791,
+          "tail": "lower",
+          "p": 0.0244081034903588,
+          "hits": 99,
+          "n": 4096,
+          "ci95": [
+            0.01968649971149719,
+            0.0293483582632022
+          ]
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.31202940741750157,
+          "tail": "upper",
+          "p": 0.08054674151818404,
+          "hits": 329,
+          "n": 4096,
+          "ci95": [
+            0.07217830716617371,
+            0.08907056200303796
+          ]
+        }
+      },
+      "family": {
+        "p": 0.028313400048816207,
+        "hits": 115,
+        "n": 4096,
+        "ci95": [
+          0.023234157370229963,
+          0.03360593195820603
+        ],
+        "min_local_p": 0.006834268977300464,
+        "n_tests": 4
+      },
+      "variance_closure": {
+        "analytic": 2085.0967745192816,
+        "simulation_mean": 2087.143323324137,
+        "standard_errors": 0.37722713239992844
+      },
+      "quadrature_relative_change": 4.2299497238218464e-13,
+      "axis_count": 24,
+      "maximizing_axis_galactic_lon_lat_deg": [
+        67.5,
+        41.81031489577859
+      ]
+    },
+    "broader_smoothing": {
+      "settings": {
+        "name": "broader_smoothing",
+        "mask_min_fraction": 0.95,
+        "smoothing_fwhm_deg": 8.0
+      },
+      "f_sky": 0.8118489583333334,
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 1767.8523640973804,
+          "tail": "lower",
+          "p": 0.0061020258725897,
+          "hits": 24,
+          "n": 4096,
+          "ci95": [
+            0.003757712981746667,
+            0.008705817779033058
+          ]
+        },
+        "masked_variance": {
+          "observed": 1217.2501806409173,
+          "tail": "lower",
+          "p": 0.053697827678789355,
+          "hits": 219,
+          "n": 4096,
+          "ci95": [
+            0.04677596162534166,
+            0.06080314780474658
+          ]
+        },
+        "pseudo_parity": {
+          "observed": 0.7294268880621063,
+          "tail": "lower",
+          "p": 0.02074688796680498,
+          "hits": 84,
+          "n": 4096,
+          "ci95": [
+            0.016389992323740186,
+            0.025327878307934676
+          ]
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.35564672169013445,
+          "tail": "upper",
+          "p": 0.09616792775201367,
+          "hits": 393,
+          "n": 4096,
+          "ci95": [
+            0.08709628021144497,
+            0.1053792459888196
+          ]
+        }
+      },
+      "family": {
+        "p": 0.02660483280449109,
+        "hits": 108,
+        "n": 4096,
+        "ci95": [
+          0.02167851855303795,
+          0.03174673598404963
+        ],
+        "min_local_p": 0.006346106907493288,
+        "n_tests": 4
+      },
+      "variance_closure": {
+        "analytic": 1675.2696757889282,
+        "simulation_mean": 1676.9373786452572,
+        "standard_errors": 0.3180997965237993
+      },
+      "quadrature_relative_change": 4.1167069753100805e-13,
+      "axis_count": 24,
+      "maximizing_axis_galactic_lon_lat_deg": [
+        67.5,
+        41.81031489577859
+      ]
+    }
+  },
+  "source": {
+    "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "path": "data/raw/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "sha256": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac",
+    "bytes": 2013312960,
+    "retrieved_utc": "2026-10-31T20:03:59.443003+00:00",
+    "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
+    "kind": "component-separated sky map"
+  },
+  "interpretation": "Matched finite-band map estimators under an ideal Gaussian CMB-only null; not Planck end-to-end likelihood significances.",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "healpy": "1.20.1",
+    "astropy": "6.1.7",
+    "SciencePlots": "2.2.2"
+  },
+  "created_utc": "2026-11-04T09:09:25.411774+00:00",
+  "source_sha256": {
+    "scripts/analyze_maps.py": "2eb63614a7e513243a34d3b5f2ff9bad3b32d42f440540eb1837337a6918834c",
+    "src/cmb_lab/map_statistics.py": "6dba14ef617e79eca15549487b3716989374f6027ae5f8813a62b89675068e92"
+  },
+  "all_variants_family": {
+    "p": 0.030998291432755676,
+    "hits": 126,
+    "n": 4096,
+    "ci95": [
+      0.025688621779619107,
+      0.0365177553085741
+    ],
+    "min_local_p": 0.006346106907493288,
+    "n_tests": 12
+  },
+  "elapsed_seconds": 81.31898412299998
+}

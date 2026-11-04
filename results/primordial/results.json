@@ -1,0 +1,61 @@
+{
+  "config": {
+    "seed": 20261104,
+    "n_calibration": 100000,
+    "fit_lmin": 2,
+    "fit_lmax": 29,
+    "prediction_lmax": 128,
+    "cutoff_min_mpc_inverse": 3e-05,
+    "cutoff_max_mpc_inverse": 0.0008,
+    "cutoff_count": 16,
+    "amplitude_steps": 11,
+    "cosmology": {
+      "H0": 67.36,
+      "ombh2": 0.02237,
+      "omch2": 0.12,
+      "mnu": 0.06,
+      "omk": 0.0,
+      "tau": 0.0544,
+      "As": 2.1e-09,
+      "ns": 0.9649
+    },
+    "status": "Retrospective phenomenological model test. Fixed background near Planck 2018; ideal full-sky TT likelihood proxy, not the official likelihood or an inflationary potential reconstruction."
+  },
+  "created_utc": "2026-11-04T09:11:54.771239+00:00",
+  "best_amplitude": 1.0,
+  "best_cutoff_mpc_inverse": 0.0002677731800328679,
+  "best_twice_log_likelihood_improvement": 1.0264184618785537,
+  "search_calibrated_p": {
+    "p": 0.2649973500264997,
+    "hits": 26499,
+    "n": 100000,
+    "ci95": [
+      0.26225651822213886,
+      0.26773711837085806
+    ]
+  },
+  "grid_entries": 176,
+  "distinct_models": 161,
+  "baseline_max_fractional_TT_difference_from_official_ell2_29": 0.0049486395484374945,
+  "accuracy_check": {
+    "accuracy_boost": 2,
+    "best_model_improvement": 1.0260204212755628,
+    "improvement_absolute_difference": 0.00039804060299086785,
+    "max_TT_fractional_change_ell2_29": 0.0007834546801963604
+  },
+  "interpretation": "Exploratory fixed-background, unlensed linear scalar transfer model. Published TT points enter an ideal full-sky likelihood proxy. Search-calibrated frequentist p, not a Bayes factor or posterior. EE/TE are predictions only.",
+  "packages": {
+    "camb": "2.0.5",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "SciencePlots": "2.2.2"
+  },
+  "input_sha256": {
+    "observed": "ccf3113604020536f6f13ccf51680a7316ad0f32da558eee7f625e613bdd5522",
+    "theory": "50eecd4422e22026070bdacf9fa8a7e7ef3badf4fa50fffea040df669715cf51"
+  },
+  "source_sha256": {
+    "scripts/analyze_primordial.py": "11de4a160469e3f0f5cbdd002e9626b11645704b2a3f3a8fce393bbe5f0fc557",
+    "src/cmb_lab/primordial.py": "b2b46e44a973bb350239b9b55070a66255c7ea0d532337bd0d54119b04ad4a0d"
+  }
+}

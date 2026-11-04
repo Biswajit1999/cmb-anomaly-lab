@@ -77,10 +77,12 @@ C_2^*=-\frac{\sum_{\ell>2}K_{2\ell}C_\ell}{K_{22}}.$$
 
 The physical nonnegative optimum is max(0, C2-star). The code also replaces each observed multipole individually by its theory value and records the change in S. These are transparent algebraic sensitivity checks. The effects are not additive because cross terms couple multipoles. A near-optimal value is not by itself surprising evidence: its significance, estimator uncertainty, and selection procedure would need separate calibration.
 
-## 5. What would make this an observational anomaly test?
+## 5. Relationship to the measured-sky extension
 
 The published TT point estimates do not have the same distribution as ideal full-sky C-ell draws. An observational analysis must send simulations through the same map cleaning, beam, pixelization, mask, monopole/dipole removal, and correlation estimator as the data. Noise and foreground uncertainty must be propagated. Estimator changes cannot be treated as independent skies; neither can PR3 and PR4 or WMAP and Planck observations of the same cosmic realization.
 
 Power-spectrum-only statistics contain no phase or directional information. Any nonnegative C-ell sequence defines an isotropic Gaussian covariance. Thus a deficit relative to a specific LCDM spectrum is not sufficient to demonstrate statistical anisotropy. Alignment, hemispherical, or off-diagonal covariance tests require map phases.
 
 These methodological distinctions are discussed in the [literature review](literature-review.md), especially Efstathiou et al., Muir et al., the Planck likelihood paper, and the 2026 exchange.
+
+Version 0.2.0 separately implements measured SMICA map statistics with a matched mask, beam/pixel window and nuisance projection. See [map methods](map-methods.md) for the finite-band estimator, direction-search calibration, numerical closure and the distinction between a Gaussian CMB-only null and a full observational simulation. The [CAMB experiment](primordial-model.md) extends the study to a primordial hypothesis and joint temperature/polarization predictions. The different experiments are not multiplied into one global discovery probability.
