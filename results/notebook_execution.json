@@ -1,0 +1,15 @@
+{
+  "author": "Biswajit Jana",
+  "executed_utc": "2026-11-04T09:48:18.731246+00:00",
+  "python": "3.10.6",
+  "analysis_revision": "47282e0e5f2b1c63f2bdbae87c213a453d133a8e",
+  "environment": "Local Python kernel",
+  "real_data_sha256": {
+    "observed": "ccf3113604020536f6f13ccf51680a7316ad0f32da558eee7f625e613bdd5522",
+    "theory": "50eecd4422e22026070bdacf9fa8a7e7ef3badf4fa50fffea040df669715cf51",
+    "smica": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac"
+  },
+  "spectral_samples": 200000,
+  "map_samples": 8192,
+  "primordial_bootstrap_samples": 100000
+}

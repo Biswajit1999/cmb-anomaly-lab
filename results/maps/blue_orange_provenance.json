@@ -1,0 +1,16 @@
+{
+  "author": "Biswajit Jana",
+  "source_sha256": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac",
+  "source_url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+  "display_nside": 512,
+  "units": "microkelvin",
+  "limits": [
+    -300,
+    300
+  ],
+  "coordinate_system": "Galactic",
+  "palette": "custom blue-cream-orange, inspired by Planck outreach images",
+  "processing": "native pixel averaging for visualization only; not the map-statistics estimator",
+  "full_sky_is_unmasked_display": true,
+  "confidence_mask_min_fraction": 0.95
+}

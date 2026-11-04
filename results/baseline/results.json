@@ -549,10 +549,10 @@
     "interpretation": "Algebraic counterfactual; neither a new cosmology nor parameter inference"
   },
   "provenance": {
-    "created_utc": "2026-11-04T09:18:08.863767+00:00",
+    "created_utc": "2026-11-04T09:46:12.805947+00:00",
     "python": "3.10.6",
     "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.35",
-    "git_commit_at_run": "1829e8720317dc7992fc5ddbc6dd979b5d9c6f4b",
+    "git_commit_at_run": "47282e0e5f2b1c63f2bdbae87c213a453d133a8e",
     "packages": {
       "numpy": "2.2.6",
       "scipy": "1.15.3",
@@ -598,5 +598,5 @@
       ]
     ]
   },
-  "elapsed_seconds": 19.815799823999996
+  "elapsed_seconds": 18.248052513999994
 }

@@ -9,15 +9,19 @@
 
 **Author: [Biswajit Jana](https://github.com/Biswajit1999)** · Updated 4 November 2026 · Independent, open research
 
+**[Project website](https://biswajit1999.github.io/cmb-anomaly-lab/)** · **[Open in Google Colab](https://colab.research.google.com/github/Biswajit1999/cmb-anomaly-lab/blob/main/notebooks/Planck_CMB_Research_Lab.ipynb)** · **[Read the executed notebook](https://biswajit1999.github.io/cmb-anomaly-lab/notebooks/Planck_CMB_Research_Lab.html)**
+
+The [notebook](notebooks/Planck_CMB_Research_Lab.ipynb) contains 40 explanatory/code cells, including **19 code cells actually executed with real Planck data**, all with saved outputs and no errors. Execution took place in a local Python kernel; the notebook is compatible with Google Colab. [Execution audit](notebooks/execution_audit.json). The website belongs to this repository, independently of the author's portfolio.
+
 Why does the oldest observable light contain so little correlation at large angular separations? Do low quadrupole power, odd/even imbalance and hemispherical differences tell us several things, or repeat information from the same few modes? Would suppressing primordial long-wavelength power actually improve the fit once the model search is counted?
 
 This repository investigates these questions using **official Planck PR3 numerical measurements**, spherical harmonics, Gaussian sky simulations, explicit search calibration and **CAMB Boltzmann transfer calculations**. It provides a study path for students and inspectable methods, numerical outputs and limitations for researchers.
 
 **Research status:** completed, reproducible exploratory study under specified idealized models. The results do not establish a new physical mechanism. This is independently authored software and analysis, not an official Planck analysis or an affiliated collaboration product. AI coding and drafting assistance is disclosed in [AUTHORS.md](AUTHORS.md).
 
-![Measured Planck SMICA temperature with confidence masking](results/maps/planck_temperature.png)
+![Blue-orange full-sky rendering of measured Planck SMICA temperature](results/maps/planck_fullsky.png)
 
-*Measured component-separated temperature anisotropy, ESA / Planck Collaboration; distributed by NASA/IPAC IRSA. Colours show temperature deviations, not individual galaxies. Grey regions are excluded by the displayed confidence mask.*
+*Measured component-separated temperature anisotropy, ESA / Planck Collaboration; distributed by NASA/IPAC IRSA. Our blue-orange rendering shows temperature deviations, not individual galaxies. This is an unmasked display; the [confidence-masked companion](results/maps/planck_blue_orange_masked.png) shows excluded regions. Display pixel averaging is separate from the quantitative map estimator.*
 
 ## Start here
 
@@ -43,7 +47,7 @@ $$T(\hat n)=\sum_{\ell m}a_{\ell m}Y_{\ell m}(\hat n),\qquad \widehat C_\ell=\fr
 
 Low multipoles represent broad sky patterns; high multipoles represent finer angular structure. Since we observe only one cosmic sky, even a perfect instrument leaves **cosmic variance**:
 
-$$\frac{(2\ell+1)\widehat C_\ell}{C_\ell}\sim\chi^2_{2\ell+1},\qquad \operatorname{Var}(\widehat C_\ell)=\frac{2C_\ell^2}{2\ell+1}.$$
+$$\frac{(2\ell+1)\widehat C_\ell}{C_\ell}\sim\chi^2_{2\ell+1},\qquad \mathrm{Var}(\widehat C_\ell)=\frac{2C_\ell^2}{2\ell+1}.$$
 
 The sky map, the measured power-spectrum estimates and a theoretical spectrum are different objects. The code keeps their provenance and roles explicit. Processed Planck products are original scientific measurements for this analysis; we do not claim to have reduced raw detector time streams.
 
@@ -126,6 +130,14 @@ In Windows PowerShell the activation command is `.venv\Scripts\Activate.ps1`; en
 
 An executed-environment version snapshot is in [requirements-lock.txt](requirements-lock.txt). Source hashes, input hashes, package versions, seeds, search grids and sample counts are recorded alongside results. Intermediate `.npz` caches are ignored; scripts recreate them. The PDF and README are generated from the executed JSON outputs.
 
+### Notebook and website maintenance
+
+The notebook pins the scientific code to commit `47282e0e5f2b1c63f2bdbae87c213a453d133a8e` so later website edits do not change its experiment. In a fresh Colab session, its setup cell clones that revision. The original 2 GB map remains downloadable from the official archive; the site serves generated outputs rather than mirroring it.
+
+Install notebook tooling with `python -m pip install -e '.[notebook]'`. `scripts/execute_notebook.py` executes and saves every cell; after newer commits it uses an isolated pinned checkout. `--export-only` preserves executed outputs and rebuilds the HTML view. `scripts/build_notebook.py` regenerates the source notebook and clears its saved outputs, so follow it with execution before publishing.
+
+The static website is packaged by `scripts/package_site.py`, checked by `scripts/validate_web_artifacts.py`, and deployed by the repository's GitHub Pages workflow. The author's portfolio is a separate project.
+
 ## Validation and numerical limits
 
 - **18 numerical tests:** analytic distributions, quadrature, projection invariance, pixel-pair addition theorem, dense-covariance closure, harmonic sampling, likelihood algebra and conditional polarization identities.
@@ -161,6 +173,8 @@ results/masked_sky/  Measured map statistics, calibration CSV and figures
 results/primordial/  CAMB parameter grid, polarization predictions and figures
 reports/             Illustrated PDF, Markdown report and rendered equations
 docs/                Derivations, literature, hypothesis ledger
+notebooks/           Executed notebook, HTML view and execution audit
+site/                Research website styling and map interaction
 ```
 
 ## Citation and credit

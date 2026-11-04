@@ -270,7 +270,7 @@
     "astropy": "6.1.7",
     "SciencePlots": "2.2.2"
   },
-  "created_utc": "2026-11-04T09:09:25.411774+00:00",
+  "created_utc": "2026-11-04T09:47:46.917494+00:00",
   "source_sha256": {
     "scripts/analyze_maps.py": "2eb63614a7e513243a34d3b5f2ff9bad3b32d42f440540eb1837337a6918834c",
     "src/cmb_lab/map_statistics.py": "6dba14ef617e79eca15549487b3716989374f6027ae5f8813a62b89675068e92"
@@ -286,5 +286,5 @@
     "min_local_p": 0.006346106907493288,
     "n_tests": 12
   },
-  "elapsed_seconds": 81.31898412299998
+  "elapsed_seconds": 81.383790417
 }

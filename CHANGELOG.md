@@ -1,5 +1,13 @@
 # Research releases
 
+## Website and executed notebook - 4 November 2026
+
+- Published the project website from this repository at `https://biswajit1999.github.io/cmb-anomaly-lab/`.
+- Added a Colab-compatible teaching notebook with 40 cells, including 19 genuinely executed code cells and real Planck outputs; local execution is disclosed.
+- Rendered full-sky and confidence-masked SMICA maps in a custom blue-orange palette and updated the report cover.
+- Added readable HTML versions of the notebook, methods, literature and results, plus a repository-owned GitHub Pages deployment workflow.
+- Replaced the README's rejected `operatorname` variance macro with `mathrm`, including the generator so the fix persists.
+
 ## 0.2.0 - 4 November 2026
 
 Completed the measured-sky and primordial-model extension of the study.

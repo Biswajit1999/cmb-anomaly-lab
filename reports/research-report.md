@@ -8,7 +8,7 @@ Spectrum experiments, measured-sky analysis and Boltzmann transfer modelling.
 
 Original Planck data. Mathematical physics. Reproducible simulation.
 
-![ESA / Planck Collaboration SMICA temperature measurement, displayed with its confidence mask. Grey regions are excluded from the display.](../results/maps/planck_temperature.png)
+![ESA / Planck Collaboration SMICA measurements, rendered in a blue-orange palette by Biswajit Jana. Unmasked display; the statistical analysis uses a confidence mask.](../results/maps/planck_fullsky.png)
 
 ### The scientific question
 
@@ -172,6 +172,8 @@ The following sections report an executed map-and-mask experiment, analytic vari
 Install the package with the dev and report extras, run scripts/download_data.py, run pytest, then run cmb-lab. Rebuild this document with scripts/build_report.py. Use the maps extra and render_planck_map.py for the measured-sky figure. README.md contains complete commands, and requirements-lock.txt records the executed environment.
 
 Repository: https://github.com/Biswajit1999/cmb-anomaly-lab
+
+Website: https://biswajit1999.github.io/cmb-anomaly-lab/ . The project notebook contains 19 executed code cells with real-data outputs and is ready to open in Google Colab. Saved execution occurred in a local Python kernel.
 
 ## 09 / From native pixels to a matched experiment
 

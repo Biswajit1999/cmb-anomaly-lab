@@ -11,3 +11,4 @@ results/**/*.npz
 results/quick/
 tmp/
 .DS_Store
+_site/
