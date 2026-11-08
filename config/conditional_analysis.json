@@ -1,0 +1,20 @@
+{
+  "seed": 20261108,
+  "n_reference": 1024,
+  "n_calibration": 4096,
+  "n_validation": 1024,
+  "input_lmax": 128,
+  "nside": 32,
+  "correlation_lmax": 95,
+  "smoothing_fwhm_deg": 5.0,
+  "mask_min_fraction": 0.95,
+  "axis_nside": 2,
+  "theta_min_deg": 60,
+  "theta_max_deg": 180,
+  "theta_step_deg": 1,
+  "alpha": 0.05,
+  "n_injection": 1024,
+  "injection_amplitudes": [0.0, 0.05, 0.1, 0.2, 0.3],
+  "injection_axis_lon_lat_deg": [225.0, -27.0],
+  "status": "Retrospective exploratory extension. Ensemble counts, grid, statistics, direction and amplitudes fixed before executing this extension; not preregistered independent discovery tests. Conditional ensembles are distinct hypotheses and are never pooled for significance."
+}
