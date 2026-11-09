@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "gaussian": {
+      "variance_closure_standard_errors": 0.059254762875903734,
+      "held_out_coverage": {
+        "hits": 970,
+        "n": 1024,
+        "rate": 0.947265625,
+        "ci95": [
+          0.9317501902391336,
+          0.960139433829932
+        ]
+      },
+      "max_tail_validation_difference_standard_errors": 2.056336946859098
+    },
+    "fixed_power": {
+      "variance_closure_standard_errors": 0.963014328160305,
+      "held_out_coverage": {
+        "hits": 969,
+        "n": 1024,
+        "rate": 0.9462890625,
+        "ci95": [
+          0.9306585400154328,
+          0.9592847053237007
+        ]
+      },
+      "max_tail_validation_difference_standard_errors": 1.1555688191577753
+    },
+    "rotation": {
+      "variance_closure_standard_errors": 0.5430940112372732,
+      "held_out_coverage": {
+        "hits": 983,
+        "n": 1024,
+        "rate": 0.9599609375,
+        "ci95": [
+          0.9460721820238926,
+          0.9711167811843953
+        ]
+      },
+      "max_tail_validation_difference_standard_errors": 0.7557510117690011
+    }
+  },
+  "source_hashes_valid": true,
+  "csv_tail_counts_valid": true,
+  "injection_counts_valid": true,
+  "interpretation": "Numerical and ideal-null calibration validation; does not validate missing observational systematics."
+}

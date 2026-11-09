@@ -2,9 +2,9 @@
 
 ## Five questions about the largest patterns in the oldest light
 
-### Biswajit Jana | Research report v0.2.0 | 4 November 2026
+### Biswajit Jana | Research report v0.3.0 | 8 November 2026
 
-Spectrum experiments, measured-sky analysis and Boltzmann transfer modelling.
+Spectra, measured skies, transfer physics and conditional morphology experiments.
 
 Original Planck data. Mathematical physics. Reproducible simulation.
 
@@ -292,6 +292,92 @@ A model that merely reduces TT must also accept the TE and EE consequences of th
 
 The completed study demonstrates estimator-dependent large-angle rarity, shared low-multipole information, and a weak fit gain for one explicit primordial alternative. It establishes reproducible numerical results under stated models. It does not establish a physical origin for the anomalies or resolve the full cosmological debate. Independent review and realistic observational likelihoods are required for stronger conclusions.
 
+## 15 / Separate power, morphology and orientation
+
+The new experiment asks what drives a masked-sky anomaly after conditioning on different information from the same map. We retain the existing four diagnostics and processing: ell <= 128, 5 degree beam, NSIDE 32, 0.95 mask fraction, retained-pixel monopole/dipole removal and the complete 24-axis hemisphere search. Estimator dependence and modulation-based sensitivity tests have an established literature. [1, 6, 21]
+
+| Ensemble | Held fixed | Randomized |
+| --- | --- | --- |
+| Gaussian theory | Theoretical spectrum | Powers and harmonic directions |
+| Measured powers fixed | Every measured full-sky C-ell | Independent real harmonic directions |
+| Measured pattern rotated | Entire pattern and relative geometry | One global Haar-uniform rotation |
+
+$$
+\mathbf{u}_\ell^*=\sqrt{(2\ell+1)\widehat C_\ell}\,\frac{\mathbf{z}_\ell}{\|\mathbf{z}_\ell\|},\qquad\mathbf{z}_\ell\sim\mathcal{N}(0,I)
+$$
+
+For the conditional Gaussian model, the 2 ell+1 independent real harmonic coefficients form a uniform direction on a sphere of fixed radius. The m>0 real and imaginary components carry a square-root-of-two weight. Normalizing a Gaussian draw randomizes relative amplitudes and phases, while exactly preserving its specified power. Random complex phases alone would be a different ensemble.
+
+$$
+a_{\ell m}^R=\sum_{m^\prime}D^\ell_{mm^\prime}(R)a_{\ell m^\prime},\qquad d\mu(R)=\frac{d\alpha\,d\gamma\,d(\cos\beta)}{8\pi^2}
+$$
+
+Global rotations use Wigner matrices on the harmonics, with uniform azimuths and uniform cos(beta). This avoids pixel interpolation and preserves inter-multipole geometry. The fixed mask and finite axis grid do not rotate. These conditional hypotheses answer different questions; their probabilities are not pooled, multiplied or searched for the smallest discovery claim.
+
+### Observational limitation
+
+Both conditional ensembles use the processed full-sky SMICA harmonics, including uncertain Galactic regions. Global harmonic filtering before masking can mix information across mask boundaries. These procedures do not remove foreground-cleaning uncertainty and are not estimates based only on uncontaminated raw pixels. Realistic noise and cosmological-parameter uncertainty remain omitted.
+
+## 16 / Executed conditional comparisons
+
+Each ensemble contains 1,024 reference skies, 4,096 calibration skies and 1,024 held-out validation skies: 18,432 realizations in total. Separate seeded streams prevent reuse between the three hypotheses. Source hashes, package versions, the conditioning spectrum and every diagnostic value are exported.
+
+![Three distinct null hypotheses. Bars are exact 95% binomial counting intervals for local one-sided tails; they do not represent observational systematic uncertainty.](../results/conditional/figures/conditional_tails.png)
+
+| Ensemble | S lower | Variance lower | Parity lower | Hemisphere upper |
+| --- | --- | --- | --- | --- |
+| Gaussian theory | 0.0081 | 0.0481 | 0.0190 | 0.0820 |
+| Powers fixed | 0.0222 | 0.0244 | 0.2612 | 0.0283 |
+| Pattern rotated | 0.0715 | 0.0498 | 0.2538 | 0.4982 |
+
+The measured cut-sky S is compared with Gaussian theory at p = 0.0081, with measured powers fixed at p = 0.0222, and with the measured pattern rotated at p = 0.0715. These values quantify different conditional questions; the latter two are not corrections to the former.
+
+Four-diagnostic family probabilities: Gaussian theory 0.0356, Powers fixed 0.0744, Pattern rotated 0.1379. The family covers four statistics within each null only; the separate envelope tests and prior analyses are not included.
+
+Maximum multipole power-preservation error is 4.2e-14 fractionally. Analytic projected-variance means agree with calibration means within 0.96 Monte Carlo standard errors. These checks validate the implementation, not the completeness of the observational model.
+
+## 17 / Simultaneous correlation envelopes
+
+$$
+M(C)=\max_{\theta\in\Theta}\left|\frac{C(\theta)-\mu_{\rm ref}(\theta)}{s_{\rm ref}(\theta)}\right|,\qquad\Theta=\{60^\circ,61^\circ,\ldots,180^\circ\}
+$$
+
+Reference-only means and scales define the score. The independent calibration order statistic at rank ceil((n+1)*0.95) gives a 95% finite-grid prediction envelope. This is a two-sided maximum-deviation test, not the lower-tail S statistic or a confidence interval for a mean.
+
+![Envelopes cover all 121 declared angles simultaneously under each idealized ensemble. No continuum-wide guarantee is claimed. The measured curve is black.](../results/conditional/figures/simultaneous_envelopes.png)
+
+| Ensemble | Held-out coverage | 95% counting interval | Max-deviation p |
+| --- | --- | --- | --- |
+| Gaussian theory | 0.947 | 0.932 - 0.960 | 0.4022 |
+| Powers fixed | 0.946 | 0.931 - 0.959 | 0.4498 |
+| Pattern rotated | 0.960 | 0.946 - 0.971 | 0.2390 |
+
+Held-out coverage is measured on 1,024 independent skies for each ensemble. Both the envelope and its validation are conditional on the chosen null and reference fit. Small S and large standardized deviation are different events, so differing probabilities are expected.
+
+## 18 / Injection, recovery and what a null result means
+
+$$
+T_A(\hat n)=[1+A\,\hat n\cdot\hat p]T_{\rm smoothed}(\hat n)
+$$
+
+We apply a toy dipole modulation AFTER smoothing, at fixed Galactic direction (225 degrees, -27 degrees). Five amplitudes use 1,024 paired underlying Gaussian skies, for 5,120 processed maps. Every trial repeats mask projection and the 24-axis search. This measures our statistic's detection power, not a primordial amplitude or the significance of a different local-variance estimator. [21]
+
+![Detection fractions at a separately calibrated 5% threshold, and unsigned axis errors over all trials. Rate intervals are binomial; shaded direction intervals describe the trial distribution.](../results/conditional/figures/injection_recovery.png)
+
+| Injected A | Detection fraction | 95% counting interval | Median axis error |
+| --- | --- | --- | --- |
+| 0.00 | 0.043 | 0.031 - 0.057 | 63.7 deg |
+| 0.05 | 0.057 | 0.043 - 0.073 | 63.7 deg |
+| 0.10 | 0.081 | 0.065 - 0.099 | 56.2 deg |
+| 0.20 | 0.236 | 0.211 - 0.264 | 41.8 deg |
+| 0.30 | 0.497 | 0.466 - 0.528 | 34.6 deg |
+
+The zero-amplitude row checks false alarms on data independent of the threshold calibration. Higher-amplitude rows measure power at one fixed direction; the same underlying skies make rows correlated. The estimated axis is unsigned and discretized. A failure to reject is not an exclusion limit on modulation amplitude, especially where recovery is weak.
+
+### Reproduce this extension
+
+Run scripts/analyze_conditional.py and scripts/validate_conditional.py, or execute all 13 code cells in Planck_CMB_Advanced_Inference.ipynb. The saved notebook includes real-data outputs, three comparison maps and the full simulation execution. Local Python execution is documented; Google Colab compatibility does not imply execution on Google's infrastructure.
+
 ## References and research provenance
 
 A focused reading guide with reading-depth labels, caveats and primary-source links is provided in docs/literature-review.md. The following references anchor this report; inclusion is not endorsement of every interpretation.
@@ -335,5 +421,7 @@ A focused reading guide with reading-depth labels, caveats and primary-source li
 19. [Hivon et al. MASTER of the CMB anisotropy power spectrum (2002)](https://arxiv.org/abs/astro-ph/0105302)
 
 20. [Probing foreground residuals in cleaned CMB temperature maps from Planck (2025)](https://link.springer.com/article/10.1140/epjc/s10052-025-15246-y)
+
+21. [Akrami et al. Power asymmetry using a local variance estimator (2014)](https://arxiv.org/abs/1402.0870)
 
 Data: NASA/IPAC IRSA Planck PR3 ancillary products and CMB maps. Credit ESA and the Planck Collaboration. Some visualization results use healpy and HEALPix. Original software and prose: MIT license, copyright 2026 Biswajit Jana. Third-party data retain their source terms.

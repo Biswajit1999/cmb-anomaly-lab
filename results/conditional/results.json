@@ -1,0 +1,556 @@
+{
+  "config": {
+    "seed": 20261108,
+    "n_reference": 1024,
+    "n_calibration": 4096,
+    "n_validation": 1024,
+    "input_lmax": 128,
+    "nside": 32,
+    "correlation_lmax": 95,
+    "smoothing_fwhm_deg": 5.0,
+    "mask_min_fraction": 0.95,
+    "axis_nside": 2,
+    "theta_min_deg": 60,
+    "theta_max_deg": 180,
+    "theta_step_deg": 1,
+    "alpha": 0.05,
+    "n_injection": 1024,
+    "injection_amplitudes": [
+      0.0,
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "injection_axis_lon_lat_deg": [
+      225.0,
+      -27.0
+    ],
+    "status": "Retrospective exploratory extension. Ensemble counts, grid, statistics, direction and amplitudes fixed before executing this extension; not preregistered independent discovery tests. Conditional ensembles are distinct hypotheses and are never pooled for significance."
+  },
+  "created_utc": "2026-11-08T22:28:49.571069+00:00",
+  "ensembles": {
+    "gaussian": {
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 2036.8056017035017,
+          "tail": "lower",
+          "p": 0.008054674151818403,
+          "hits": 32,
+          "n": 4096,
+          "ci95": [
+            0.005349704647585767,
+            0.011011168204278781
+          ],
+          "validation": {
+            "p": 0.006829268292682927,
+            "hits": 6,
+            "n": 1024,
+            "ci95": [
+              0.0021532323522918087,
+              0.012709474160549634
+            ]
+          },
+          "validation_difference_standard_errors": 0.4086351834840002
+        },
+        "masked_variance": {
+          "observed": 1590.5224597111323,
+          "tail": "lower",
+          "p": 0.04808396387600684,
+          "hits": 196,
+          "n": 4096,
+          "ci95": [
+            0.04151723008640691,
+            0.05484031999312982
+          ],
+          "validation": {
+            "p": 0.03902439024390244,
+            "hits": 39,
+            "n": 1024,
+            "ci95": [
+              0.027220429662996468,
+              0.05169918166438263
+            ]
+          },
+          "validation_difference_standard_errors": 1.2391003416404711
+        },
+        "pseudo_parity": {
+          "observed": 0.7624026736607924,
+          "tail": "lower",
+          "p": 0.01903832072247986,
+          "hits": 77,
+          "n": 4096,
+          "ci95": [
+            0.014863497229793958,
+            0.0234399714064646
+          ],
+          "validation": {
+            "p": 0.02926829268292683,
+            "hits": 29,
+            "n": 1024,
+            "ci95": [
+              0.019046820178762913,
+              0.04042082623935389
+            ]
+          },
+          "validation_difference_standard_errors": -2.056336946859098
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.31084859602326814,
+          "tail": "upper",
+          "p": 0.08201122772760557,
+          "hits": 335,
+          "n": 4096,
+          "ci95": [
+            0.07357325434693378,
+            0.09060310023373105
+          ],
+          "validation": {
+            "p": 0.07121951219512195,
+            "hits": 72,
+            "n": 1024,
+            "ci95": [
+              0.0554184880088618,
+              0.08773052087603941
+            ]
+          },
+          "validation_difference_standard_errors": 1.1418511593932203
+        }
+      },
+      "four_diagnostic_family": {
+        "p": 0.035635831095923845,
+        "hits": 145,
+        "n": 4096,
+        "ci95": [
+          0.029952793271699862,
+          0.04152289463667776
+        ],
+        "min_local_p": 0.010731707317073172,
+        "n_tests": 4
+      },
+      "simultaneous_band": {
+        "alpha": 0.05,
+        "cutoff": 2.865018590402793,
+        "observed_max_studentized_deviation": 1.5558110244248247,
+        "upper_tail": {
+          "p": 0.402245545521113,
+          "hits": 1647,
+          "n": 4096,
+          "ci95": [
+            0.3870360328589956,
+            0.41730297926049764
+          ]
+        },
+        "independent_validation_coverage": {
+          "hits": 970,
+          "n": 1024,
+          "rate": 0.947265625,
+          "ci95": [
+            0.9317501902391336,
+            0.960139433829932
+          ]
+        },
+        "scope": "Two-sided prediction envelope on the declared finite angular grid; not a low-correlation S test, not a confidence interval for the mean."
+      },
+      "variance_closure": {
+        "analytic": 2087.657814809686,
+        "calibration_mean": 2087.9747700806347,
+        "standard_errors": 0.059254762875903734
+      },
+      "max_relative_power_preservation_error": null
+    },
+    "fixed_power": {
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 2036.8056017035017,
+          "tail": "lower",
+          "p": 0.022211374176226508,
+          "hits": 90,
+          "n": 4096,
+          "ci95": [
+            0.01770473085450165,
+            0.026939875380531896
+          ],
+          "validation": {
+            "p": 0.024390243902439025,
+            "hits": 24,
+            "n": 1024,
+            "ci95": [
+              0.01507322780389556,
+              0.034673394999999385
+            ]
+          },
+          "validation_difference_standard_errors": -0.4226670076684933
+        },
+        "masked_variance": {
+          "observed": 1590.5224597111323,
+          "tail": "lower",
+          "p": 0.0244081034903588,
+          "hits": 99,
+          "n": 4096,
+          "ci95": [
+            0.01968649971149719,
+            0.0293483582632022
+          ],
+          "validation": {
+            "p": 0.03024390243902439,
+            "hits": 30,
+            "n": 1024,
+            "ci95": [
+              0.019851916961813293,
+              0.04156042698728493
+            ]
+          },
+          "validation_difference_standard_errors": -1.0658022043650732
+        },
+        "pseudo_parity": {
+          "observed": 0.7624026736607924,
+          "tail": "lower",
+          "p": 0.26116670734683917,
+          "hits": 1069,
+          "n": 4096,
+          "ci95": [
+            0.2475891323236614,
+            0.2747252350432676
+          ],
+          "validation": {
+            "p": 0.26926829268292685,
+            "hits": 275,
+            "n": 1024,
+            "ci95": [
+              0.2416178789830981,
+              0.2968288675380983
+            ]
+          },
+          "validation_difference_standard_errors": -0.52701055881051
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.31084859602326814,
+          "tail": "upper",
+          "p": 0.028313400048816207,
+          "hits": 115,
+          "n": 4096,
+          "ci95": [
+            0.023234157370229963,
+            0.03360593195820603
+          ],
+          "validation": {
+            "p": 0.0351219512195122,
+            "hits": 35,
+            "n": 1024,
+            "ci95": [
+              0.023920615793162844,
+              0.047217034370959095
+            ]
+          },
+          "validation_difference_standard_errors": -1.1555688191577753
+        }
+      },
+      "four_diagnostic_family": {
+        "p": 0.07444471564559434,
+        "hits": 304,
+        "n": 4096,
+        "ci95": [
+          0.06637508200478939,
+          0.08267596893156753
+        ],
+        "min_local_p": 0.02048780487804878,
+        "n_tests": 4
+      },
+      "simultaneous_band": {
+        "alpha": 0.05,
+        "cutoff": 2.9214757469562147,
+        "observed_max_studentized_deviation": 1.8801970793315603,
+        "upper_tail": {
+          "p": 0.4498413473273127,
+          "hits": 1842,
+          "n": 4096,
+          "ci95": [
+            0.43439086424024825,
+            0.46509500140641935
+          ]
+        },
+        "independent_validation_coverage": {
+          "hits": 969,
+          "n": 1024,
+          "rate": 0.9462890625,
+          "ci95": [
+            0.9306585400154328,
+            0.9592847053237007
+          ]
+        },
+        "scope": "Two-sided prediction envelope on the declared finite angular grid; not a low-correlation S test, not a confidence interval for the mean."
+      },
+      "variance_closure": {
+        "analytic": 1739.623047948094,
+        "calibration_mean": 1738.5844322964228,
+        "standard_errors": -0.963014328160305
+      },
+      "max_relative_power_preservation_error": 2.1094237467877974e-15
+    },
+    "rotation": {
+      "statistics": {
+        "cut_sky_s_half": {
+          "observed": 2036.8056017035017,
+          "tail": "lower",
+          "p": 0.07151574322675128,
+          "hits": 292,
+          "n": 4096,
+          "ci95": [
+            0.06359505775631683,
+            0.07960106456622078
+          ],
+          "validation": {
+            "p": 0.07512195121951219,
+            "hits": 76,
+            "n": 1024,
+            "ci95": [
+              0.058918459885379824,
+              0.09201775479882127
+            ]
+          },
+          "validation_difference_standard_errors": -0.3996258555750146
+        },
+        "masked_variance": {
+          "observed": 1590.5224597111323,
+          "tail": "lower",
+          "p": 0.04979253112033195,
+          "hits": 203,
+          "n": 4096,
+          "ci95": [
+            0.04311526136336915,
+            0.05665752948731587
+          ],
+          "validation": {
+            "p": 0.05365853658536585,
+            "hits": 54,
+            "n": 1024,
+            "ci95": [
+              0.0398605661700679,
+              0.06824980976086635
+            ]
+          },
+          "validation_difference_standard_errors": -0.5067674358415972
+        },
+        "pseudo_parity": {
+          "observed": 0.7624026736607924,
+          "tail": "lower",
+          "p": 0.2538442762997315,
+          "hits": 1039,
+          "n": 4096,
+          "ci95": [
+            0.24039460532523693,
+            0.267281834529774
+          ],
+          "validation": {
+            "p": 0.2653658536585366,
+            "hits": 271,
+            "n": 1024,
+            "ci95": [
+              0.23784894365782616,
+              0.2928080194466225
+            ]
+          },
+          "validation_difference_standard_errors": -0.7557510117690011
+        },
+        "hemisphere_max_contrast": {
+          "observed": 0.31084859602326814,
+          "tail": "upper",
+          "p": 0.4981693922382231,
+          "hits": 2040,
+          "n": 4096,
+          "ci95": [
+            0.4826187070857387,
+            0.5134778312387562
+          ],
+          "validation": {
+            "p": 0.5034146341463415,
+            "hits": 515,
+            "n": 1024,
+            "ci95": [
+              0.47184659945371765,
+              0.5339958906888796
+            ]
+          },
+          "validation_difference_standard_errors": -0.3002557397964955
+        }
+      },
+      "four_diagnostic_family": {
+        "p": 0.13790578472052722,
+        "hits": 564,
+        "n": 4096,
+        "ci95": [
+          0.1272818575252784,
+          0.14862841635165938
+        ],
+        "min_local_p": 0.04390243902439024,
+        "n_tests": 4
+      },
+      "simultaneous_band": {
+        "alpha": 0.05,
+        "cutoff": 2.6973655378559354,
+        "observed_max_studentized_deviation": 2.16248329606694,
+        "upper_tail": {
+          "p": 0.23895533317061265,
+          "hits": 978,
+          "n": 4096,
+          "ci95": [
+            0.22578126575902838,
+            0.2521314030473351
+          ]
+        },
+        "independent_validation_coverage": {
+          "hits": 983,
+          "n": 1024,
+          "rate": 0.9599609375,
+          "ci95": [
+            0.9460721820238926,
+            0.9711167811843953
+          ]
+        },
+        "scope": "Two-sided prediction envelope on the declared finite angular grid; not a low-correlation S test, not a confidence interval for the mean."
+      },
+      "variance_closure": {
+        "analytic": 1739.623047948094,
+        "calibration_mean": 1740.3250051676794,
+        "standard_errors": 0.5430940112372732
+      },
+      "max_relative_power_preservation_error": 4.1744385725905886e-14
+    }
+  },
+  "f_sky": 0.8118489583333334,
+  "source": {
+    "url": "https://irsa.ipac.caltech.edu/data/Planck/release_3/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "path": "data/raw/COM_CMB_IQU-smica_2048_R3.00_full.fits",
+    "sha256": "60952c645eb33d151905ddf5837477e15ca02a3261feca4ceca3c3feece4f9ac",
+    "bytes": 2013312960,
+    "retrieved_utc": "2026-10-31T20:03:59.443003+00:00",
+    "credit": "ESA and Planck Collaboration; NASA/IPAC IRSA distribution",
+    "kind": "component-separated sky map"
+  },
+  "source_sha256": {
+    "scripts/analyze_conditional.py": "34f6f2b43b2ef1017d8809d64d1bf1501cbd4d61a6b35863648ec97357e6e5fb",
+    "src/cmb_lab/conditional.py": "b7dcb0cb2e1a48c97b55ac4c5f2152be977c1b73441424375e1cff22c3bc0589",
+    "src/cmb_lab/map_statistics.py": "6dba14ef617e79eca15549487b3716989374f6027ae5f8813a62b89675068e92",
+    "scripts/analyze_maps.py": "2eb63614a7e513243a34d3b5f2ff9bad3b32d42f440540eb1837337a6918834c"
+  },
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "healpy": "1.20.1",
+    "astropy": "6.1.7",
+    "SciencePlots": "2.2.2"
+  },
+  "seed_spawn_keys": {
+    "gaussian": [
+      0
+    ],
+    "fixed_power": [
+      1
+    ],
+    "rotation": [
+      2
+    ],
+    "injection": [
+      3
+    ]
+  },
+  "interpretation": "Exploratory CMB-only randomization diagnostics. The fixed powers and rotated pattern come from a processed full-sky component-separated map, including uncertain foreground regions. Smoothing before masking can mix these regions into retained pixels. Neither conditional ensemble removes this systematic uncertainty or constitutes an independent observation.",
+  "injection": {
+    "threshold": 0.32887467322881125,
+    "alpha": 0.05,
+    "rows": [
+      {
+        "amplitude": 0.0,
+        "detection": {
+          "hits": 44,
+          "n": 1024,
+          "rate": 0.04296875,
+          "ci95": [
+            0.03139183332587829,
+            0.05725680384339795
+          ]
+        },
+        "median_axis_error_deg": 63.72537059224333,
+        "axis_error_interval68_deg": [
+          34.59532575544599,
+          81.29598047740373
+        ]
+      },
+      {
+        "amplitude": 0.05,
+        "detection": {
+          "hits": 58,
+          "n": 1024,
+          "rate": 0.056640625,
+          "ci95": [
+            0.043287016971251625,
+            0.07260905274977554
+          ]
+        },
+        "median_axis_error_deg": 63.72537059224333,
+        "axis_error_interval68_deg": [
+          34.59532575544599,
+          81.29598047740373
+        ]
+      },
+      {
+        "amplitude": 0.1,
+        "detection": {
+          "hits": 83,
+          "n": 1024,
+          "rate": 0.0810546875,
+          "ci95": [
+            0.06507414893654577,
+            0.09949019761865384
+          ]
+        },
+        "median_axis_error_deg": 56.16473823201102,
+        "axis_error_interval68_deg": [
+          23.619777021348487,
+          81.29598047740373
+        ]
+      },
+      {
+        "amplitude": 0.2,
+        "detection": {
+          "hits": 242,
+          "n": 1024,
+          "rate": 0.236328125,
+          "ci95": [
+            0.21060804715902193,
+            0.26357329287790676
+          ]
+        },
+        "median_axis_error_deg": 41.81216062841632,
+        "axis_error_interval68_deg": [
+          23.619777021348487,
+          65.40774019156682
+        ]
+      },
+      {
+        "amplitude": 0.3,
+        "detection": {
+          "hits": 509,
+          "n": 1024,
+          "rate": 0.4970703125,
+          "ci95": [
+            0.46600410931112035,
+            0.5281534005462823
+          ]
+        },
+        "median_axis_error_deg": 34.59532575544599,
+        "axis_error_interval68_deg": [
+          7.52877936550927,
+          56.16473823201095
+        ]
+      }
+    ],
+    "axis_lon_lat_deg": [
+      225.0,
+      -27.0
+    ],
+    "interpretation": "Detection power of a toy dipole modulation applied AFTER 5-degree smoothing; not an inferred primordial amplitude. Each row uses the same underlying skies, so rates across amplitudes are correlated. The maximizing axis is unsigned and searched over 24 directions."
+  },
+  "elapsed_seconds": 135.76963671100003
+}

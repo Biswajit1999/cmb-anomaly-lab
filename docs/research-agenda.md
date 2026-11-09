@@ -50,6 +50,14 @@ The multi-product foreground/noise and end-to-end simulation components above ar
 
 **Discriminating consequence:** the same transfer calculation supplies TE and EE and the conditional expectation of EE given TT. These are exported predictions, not fitted polarization observations. A model cannot reduce temperature power independently of its polarization consequences.
 
+## H5. Morphology and orientation contain information beyond low power
+
+**Implemented in v0.3.0:** three ensembles totaling 18,432 realizations compare Gaussian theory, uniform harmonic directions conditional on every measured full-sky power, and Haar rotations of the whole measured pattern. Each repeats the identical fixed-mask estimator. The angular correlation has lower-tail p approximately 0.0081, 0.0222 and 0.0715 respectively. These are different hypotheses, not corrections to one probability or independent evidence to multiply.
+
+**Sensitivity result:** 5,120 paired toy dipole-modulation injections measure the hemisphere test's power. At A=0.10, detection is only about 8.1% at a nominal 5% threshold; a nondetection cannot exclude such a signal. Modulation is applied after smoothing at one fixed illustrative axis, so this is not an inferred primordial amplitude.
+
+**Validation:** held-out simultaneous-envelope coverage is 94.7%, 94.6% and 96.0% on the declared angular grid. Power conservation, analytic variance closure and independent tail counts are checked. Full-sky component-separation uncertainty and mixing across mask boundaries remain. [Methods](conditional-methods.md) · [Executed results](../results/conditional/SUMMARY.md).
+
 ## What would justify claiming a discovery?
 
 A mechanism must give a quantitative, reproducible prediction that differs from competing models; the measured discrepancy must survive matched data processing, nuisance uncertainty, and the actual search procedure; and the claim must withstand independent scientific review. The current outputs are a research starting point and numerical reproduction, not that endpoint.

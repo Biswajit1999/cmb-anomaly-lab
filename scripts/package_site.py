@@ -7,7 +7,7 @@ for name in ['index.html','CITATION.cff','AUTHORS.md','AUTHORS.html','LICENSE','
     shutil.copy2(root/name,dest/name)
 for folder in ['site','reports','notebooks','docs','config','results','scripts','src','tests']:
     for path in (root/folder).rglob('*'):
-        if not path.is_file() or 'quick' in path.parts or path.suffix not in {'.html','.css','.js','.json','.md','.png','.pdf','.csv','.ipynb','.py'}:
+        if not path.is_file() or 'quick' in path.parts or path.suffix not in {'.html','.css','.js','.json','.md','.png','.pdf','.csv','.ipynb','.py','.zip'}:
             continue
         target=dest/path.relative_to(root); target.parent.mkdir(parents=True,exist_ok=True)
         shutil.copy2(path,target)

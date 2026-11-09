@@ -1,5 +1,16 @@
 # Research releases
 
+## 0.3.0 - 9 November 2026
+
+- Added fixed-power conditional harmonic sampling and Haar-uniform rotations of the measured pattern, alongside a fresh Gaussian comparison: 18,432 realizations across independent reference, calibration and held-out sets.
+- Added finite-grid simultaneous correlation envelopes, held-out coverage and analytic projected-variance closure under each ensemble.
+- Executed 5,120 paired post-smoothing dipole-modulation injections to quantify hemisphere-test power, false alarms and unsigned direction recovery.
+- Added ten tests of harmonic moments, Haar isotropy, rotation conservation, envelope coverage, binomial counting, thresholds and injection response; 28 tests total.
+- Added a second Colab-compatible notebook with 13 executed code cells and saved real-data outputs. Local execution is disclosed.
+- Expanded the report with four research sections, equations, SciencePlots figures and author/project/page footers; updated README, website, methods, literature and reproducibility exports.
+
+These are distinct conditional randomization hypotheses, not additional independent sky measurements. The study retains its explicit idealized-null and foreground limitations and makes no new-physics discovery claim.
+
 ## Website and executed notebook - 4 November 2026
 
 - Published the project website from this repository at `https://biswajit1999.github.io/cmb-anomaly-lab/`.

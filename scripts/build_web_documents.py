@@ -5,7 +5,7 @@ import nbformat
 from nbconvert import HTMLExporter
 root=Path(__file__).resolve().parents[1]
 files=[*sorted((root/'docs').glob('*.md')),root/'AUTHORS.md',root/'data/README.md',
-       root/'results/baseline/SUMMARY.md',root/'results/masked_sky/SUMMARY.md']
+       root/'results/baseline/SUMMARY.md',root/'results/masked_sky/SUMMARY.md',root/'results/conditional/SUMMARY.md']
 destinations={p.resolve():p.with_suffix('.html') for p in files}
 exporter=HTMLExporter(template_name='lab')
 for path in files:

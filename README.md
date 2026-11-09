@@ -5,13 +5,15 @@
 [![Numerical validation](https://github.com/Biswajit1999/cmb-anomaly-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Biswajit1999/cmb-anomaly-lab/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/Code-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](pyproject.toml)
-[![Research release](https://img.shields.io/badge/Research-v0.2.0-287f91.svg)](CITATION.cff)
+[![Research release](https://img.shields.io/badge/Research-v0.3.0-287f91.svg)](CITATION.cff)
 
-**Author: [Biswajit Jana](https://github.com/Biswajit1999)** · Updated 4 November 2026 · Independent, open research
+**Author: [Biswajit Jana](https://github.com/Biswajit1999)** · Updated 9 November 2026 · Independent, open research
 
 **[Project website](https://biswajit1999.github.io/cmb-anomaly-lab/)** · **[Open in Google Colab](https://colab.research.google.com/github/Biswajit1999/cmb-anomaly-lab/blob/main/notebooks/Planck_CMB_Research_Lab.ipynb)** · **[Read the executed notebook](https://biswajit1999.github.io/cmb-anomaly-lab/notebooks/Planck_CMB_Research_Lab.html)**
 
 The [notebook](notebooks/Planck_CMB_Research_Lab.ipynb) contains 40 explanatory/code cells, including **19 code cells actually executed with real Planck data**, all with saved outputs and no errors. Execution took place in a local Python kernel; the notebook is compatible with Google Colab. [Execution audit](notebooks/execution_audit.json). The website belongs to this repository, independently of the author's portfolio.
+
+**New advanced notebook:** [read 13 additional executed code cells](https://biswajit1999.github.io/cmb-anomaly-lab/notebooks/Planck_CMB_Advanced_Inference.html) · [open in Colab](https://colab.research.google.com/github/Biswajit1999/cmb-anomaly-lab/blob/main/notebooks/Planck_CMB_Advanced_Inference.ipynb) · [execution audit](notebooks/advanced_execution_audit.json). It runs the full conditional and injection analysis, with actual saved outputs from a local Python kernel.
 
 Why does the oldest observable light contain so little correlation at large angular separations? Do low quadrupole power, odd/even imbalance and hemispherical differences tell us several things, or repeat information from the same few modes? Would suppressing primordial long-wavelength power actually improve the fit once the model search is counted?
 
@@ -62,6 +64,29 @@ The sky map, the measured power-spectrum estimates and a theoretical spectrum ar
 | Does an explicit primordial alternative do better? | CAMB TT/TE/EE transfer, finite parameter search and 100,000-sky calibration | Tests a physical power-spectrum hypothesis and its polarization consequences |
 
 The first four diagnostics are also studied jointly rather than multiplying their nominal p-values. Low correlations and low variance can partly reflect the same quadrupole.
+
+## Beyond low power: new conditional experiments
+
+Do the masked-sky anomalies contain information beyond the measured angular powers? Does orientation relative to the Galactic mask matter? We now separate these questions with three distinct ensembles and test detection sensitivity with injected signals.
+
+| Null hypothesis | S lower tail | Variance lower tail | Pseudo-parity lower tail | Hemisphere upper tail |
+|---|---:|---:|---:|---:|
+| Gaussian theory | 0.0081 | 0.0481 | 0.0190 | 0.0820 |
+| Measured powers fixed | 0.0222 | 0.0244 | 0.2612 | 0.0283 |
+| Measured pattern rotated | 0.0715 | 0.0498 | 0.2538 | 0.4982 |
+
+**18,432 realizations:** each ensemble uses 1,024 reference, 4,096 calibration and 1,024 held-out validation skies. Fixed-power sampling preserves every measured C-ell while randomizing harmonic directions; global Haar rotations preserve the whole pattern. These are different conditional questions, not three estimates to combine into one significance.
+
+![Conditional morphology and orientation comparisons](results/conditional/figures/conditional_tails.png)
+
+**Simultaneous correlation envelopes** cover the declared 121-angle grid, with independent calibration and held-out coverage checks. **5,120 paired injected maps** measure the 24-axis hemisphere test's detection power at five toy modulation amplitudes. Modulation is applied after smoothing; this is not an inferred primordial amplitude.
+
+**What the new run adds:** correlation S has p=0.0222 with the measured powers fixed and p=0.0715 over rotated copies of the measured pattern. The hemisphere test detects only 8.1% of toy A=0.10 injections at its nominal 5% threshold. Thus this detector has weak power for that illustrative signal; a nondetection cannot exclude it.
+
+The conditional models use processed full-sky SMICA coefficients, including uncertain Galactic regions. Filtering before masking can mix information across mask boundaries. Conditional simulations do not remove this systematic uncertainty.
+
+[Derivation and research context](docs/conditional-methods.md) · [Results and figures](results/conditional/SUMMARY.md) · [Validation](results/conditional/validation.json) · [Numerical files](results/conditional/) · [Advanced notebook](notebooks/Planck_CMB_Advanced_Inference.ipynb)
+
 
 ## Results from the measured sky
 
@@ -120,6 +145,8 @@ python scripts/render_planck_map.py
 python scripts/analyze_maps.py
 python scripts/analyze_primordial.py
 python scripts/validate_extensions.py
+python scripts/analyze_conditional.py
+python scripts/validate_conditional.py
 python scripts/build_readme.py
 python scripts/build_report.py
 ```
@@ -134,13 +161,16 @@ An executed-environment version snapshot is in [requirements-lock.txt](requireme
 
 The notebook pins the scientific code to commit `47282e0e5f2b1c63f2bdbae87c213a453d133a8e` so later website edits do not change its experiment. In a fresh Colab session, its setup cell clones that revision. The original 2 GB map remains downloadable from the official archive; the site serves generated outputs rather than mirroring it.
 
+The advanced notebook independently pins `ec7803de36dd44bb7ebb08cc10412f9ac8055ef1`. Run `python scripts/execute_notebook.py --notebook Planck_CMB_Advanced_Inference` to execute its 13 cells; add `--export-only` to refresh the HTML while preserving outputs. `scripts/build_advanced_notebook.py` creates an unexecuted notebook pinned to the current commit, so do not run it as a routine website build. The release combines 32 executed code cells across two notebooks.
+
 Install notebook tooling with `python -m pip install -e '.[notebook]'`. `scripts/execute_notebook.py` executes and saves every cell; after newer commits it uses an isolated pinned checkout. `--export-only` preserves executed outputs and rebuilds the HTML view. `scripts/build_notebook.py` regenerates the source notebook and clears its saved outputs, so follow it with execution before publishing.
 
 The static website is packaged by `scripts/package_site.py`, checked by `scripts/validate_web_artifacts.py`, and deployed by the repository's GitHub Pages workflow. The author's portfolio is a separate project.
 
 ## Validation and numerical limits
 
-- **18 numerical tests:** analytic distributions, quadrature, projection invariance, pixel-pair addition theorem, dense-covariance closure, harmonic sampling, likelihood algebra and conditional polarization identities.
+- **28 numerical tests:** analytic distributions, quadrature, projection invariance, pixel-pair addition theorem, dense-covariance closure, harmonic sampling, likelihood algebra, conditional polarization, fixed-power harmonic moments, Haar isotropy, rotation invariance, simultaneous coverage and injection response.
+- **18,432 new null/randomization realizations**, split into reference, calibration and held-out validation sets under three distinct hypotheses; **5,120 paired injected maps** measure detector sensitivity. [Validation](results/conditional/validation.json).
 - **100,000 additional spectra** with an independent seed reproduce the primary spectral probabilities; see [validation](results/validation.json).
 - **2,048 additional maps** independently check baseline map tail probabilities; see [extension validation](results/extension_validation.json).
 - **Analytic variance closure:** the baseline map ensemble mean differs from its prediction by 0.36 Monte Carlo standard errors.
@@ -171,6 +201,7 @@ tests/               Mathematical and numerical validation
 results/baseline/    Spectrum ensembles, dependence and search results
 results/masked_sky/  Measured map statistics, calibration CSV and figures
 results/primordial/  CAMB parameter grid, polarization predictions and figures
+results/conditional/ Fixed-power/rotation ensembles, envelopes, injection recovery
 reports/             Illustrated PDF, Markdown report and rendered equations
 docs/                Derivations, literature, hypothesis ledger
 notebooks/           Executed notebook, HTML view and execution audit
@@ -181,7 +212,7 @@ site/                Research website styling and map interaction
 
 Use the GitHub **Cite this repository** action or [CITATION.cff](CITATION.cff). A concise software citation is:
 
-> Jana, Biswajit (2026). *CMB Anomaly Lab: Reproducible Planck Large-Angle Temperature Experiments*, version 0.2.0. https://github.com/Biswajit1999/cmb-anomaly-lab
+> Jana, Biswajit (2026). *CMB Anomaly Lab: Reproducible Planck Large-Angle Temperature Experiments*, version 0.3.0. https://github.com/Biswajit1999/cmb-anomaly-lab
 
 Cite **ESA / the Planck Collaboration** for measurements, **NASA/IPAC IRSA** for distribution, **HEALPix/healpy** for spherical-map calculations, **CAMB** for transfer functions and **SciencePlots** for figure styling. Primary scientific references and reading-depth labels are in the [literature guide](docs/literature-review.md).
 

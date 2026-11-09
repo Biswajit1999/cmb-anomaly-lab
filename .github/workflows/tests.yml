@@ -18,6 +18,7 @@ jobs:
           cache: pip
       - run: python -m pip install -e '.[dev,maps]'
       - run: python -m pytest -q
+      - run: python scripts/validate_conditional.py
       - run: cmb-lab --quick
       - uses: actions/upload-artifact@v4
         with:

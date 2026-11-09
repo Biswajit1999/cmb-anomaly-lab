@@ -39,7 +39,15 @@ Initial search and review: **31 October 2026**. Map/transfer-method additions ch
 
 The existence of unusual low-order summary statistics is well studied. Their physical cause and overall evidential weight are unsettled. A useful contribution needs explicit estimators, selection rules, observational uncertainty, and a prediction that can fail. This project supplies reproducible experiments with quantified numerical checks and stated observational limits. Conditional tests, anomaly covariance, and look-elsewhere corrections all have prior art; none is claimed as newly invented here.
 
-Version 0.2.0 extends the numerical study to measured-sky estimators and a CAMB primordial-power hypothesis. A novelty claim would require a dedicated search and independent review; these additions use established mathematical tools and are presented as an independently reproducible study.
+Version 0.2.0 extends the numerical study to measured-sky estimators and a CAMB primordial-power hypothesis. Version 0.3.0 adds conditional harmonic morphology, random orientation, simultaneous envelopes and injected-signal recovery. A novelty claim would require a dedicated search and independent review; these additions use established mathematical tools and are presented as an independently reproducible study.
+
+## Added for conditional morphology and sensitivity
+
+| Primary source | Reading depth | Role and boundary |
+|---|---|---|
+| [Akrami et al.: Power asymmetry using a local variance estimator](https://arxiv.org/abs/1402.0870), 2014 | Sections 1–3, including the modulation definition and sensitivity experiment | Motivation for injecting known anisotropy to measure detector power. Our 24-axis hemisphere search and post-smoothing modulation do not reproduce their local-disc estimator, end-to-end simulations or reported significance. |
+
+Efstathiou, Ma and Hanson's [large-angle correlation paper](https://arxiv.org/abs/0911.5399), already listed above, was revisited for estimator/sky-cut dependence. The [new method notes](conditional-methods.md) derive the actual conditional samplers, document reading depth and explicitly distinguish fixed-power from globally rotated ensembles. The healpy Wigner-rotation API documentation was checked. These implementations do not establish a new physical explanation.
 
 ## Added for the measured-sky and transfer calculations
 
