@@ -2,7 +2,7 @@
 
 ## Five questions about the largest patterns in the oldest light
 
-### Biswajit Jana | Research report v0.3.0 | 8 November 2026
+### Biswajit Jana | Research report v0.3.0 | 9 November 2026
 
 Spectra, measured skies, transfer physics and conditional morphology experiments.
 
@@ -157,7 +157,7 @@ Jones and collaborators emphasize rare joint tails of four map-based anomaly cla
 
 ### Validation actually performed
 
-The 18 numerical tests cover units, independent integration, cosmic-variance moments, exact quadrupole probabilities, parity, tail calibration, batch consistency, the cancellation derivative, nuisance projection, explicit pixel-pair powers, dense covariance, primordial limits, likelihood algebra and conditional EE. Production runs record seeds, hashes and software versions. Independent checks use 100,000 additional spectra and 2,048 additional maps.
+The 28 numerical tests cover units, integration, cosmic-variance moments, quadrupole probabilities, parity, tail calibration, batch consistency, cancellation derivatives, nuisance projection, pixel-pair powers, dense covariance, primordial limits, likelihood algebra, conditional EE, fixed-power moments, Haar isotropy, rotation conservation, simultaneous coverage and injection response. Production runs record seeds, hashes and software versions. Independent checks include 100,000 additional spectra, 2,048 baseline maps and the held-out sets in the conditional extension.
 
 ### Material limits
 
