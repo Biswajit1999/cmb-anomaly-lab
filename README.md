@@ -217,3 +217,18 @@ Use the GitHub **Cite this repository** action or [CITATION.cff](CITATION.cff). 
 Cite **ESA / the Planck Collaboration** for measurements, **NASA/IPAC IRSA** for distribution, **HEALPix/healpy** for spherical-map calculations, **CAMB** for transfer functions and **SciencePlots** for figure styling. Primary scientific references and reading-depth labels are in the [literature guide](docs/literature-review.md).
 
 The MIT license covers original project code and prose. Third-party data and software retain their own terms. Please report reproducibility issues with the command, package versions, configuration and relevant numerical output through [GitHub Issues](https://github.com/Biswajit1999/cmb-anomaly-lab/issues). Scientific corrections and independently checked reproductions are welcome.
+
+## Research evidence and downloads
+
+- [Download the machine-readable table profiles](evidence/table-profiles.json) for 8 archived tables. Open `table-evidence.html` from the checkout for the coverage chart.
+- Start with [Extension validation](results/extension_validation.json), [Notebook execution](results/notebook_execution.json), [Validation](results/validation.json).
+- [View Notebook conditional maps](results/conditional/notebook_conditional_maps.png).
+
+Run these commands from the repository root to rebuild the published evidence.
+
+```sh
+python scripts/evidence_catalog.py
+python scripts/render_evidence_page.py
+python scripts/profile_evidence_tables.py
+python scripts/render_table_profiles.py
+```
