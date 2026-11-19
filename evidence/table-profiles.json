@@ -1,0 +1,457 @@
+{
+  "schema": 1,
+  "project": "Cosmic Microwave Background Analysis · CMB Anomaly Lab",
+  "tables": [
+    {
+      "path": "results/baseline/multipole_replacement.csv",
+      "label": "Multipole replacement",
+      "role": "Tables and numerical results",
+      "rows": 63,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "ell",
+          "blank": 0,
+          "text": 0,
+          "finite": 63,
+          "nonfinite": 0,
+          "minimum": 2.0,
+          "maximum": 64.0
+        },
+        {
+          "name": "delta_S_half_uK4",
+          "blank": 0,
+          "text": 0,
+          "finite": 63,
+          "nonfinite": 0,
+          "minimum": -1467.44837353,
+          "maximum": 30377.5654095
+        }
+      ]
+    },
+    {
+      "path": "results/baseline/spectrum.csv",
+      "label": "Spectrum",
+      "role": "Tables and numerical results",
+      "rows": 127,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "ell",
+          "blank": 0,
+          "text": 0,
+          "finite": 127,
+          "nonfinite": 0,
+          "minimum": 2.0,
+          "maximum": 128.0
+        },
+        {
+          "name": "observed_Cl_uK2",
+          "blank": 0,
+          "text": 0,
+          "finite": 127,
+          "nonfinite": 0,
+          "minimum": 1.05877314353,
+          "maximum": 490.570164834
+        },
+        {
+          "name": "theory_Cl_uK2",
+          "blank": 0,
+          "text": 0,
+          "finite": 127,
+          "nonfinite": 0,
+          "minimum": 1.38177184149,
+          "maximum": 1064.71716623
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/conditioning_spectrum.csv",
+      "label": "Conditioning spectrum",
+      "role": "Tables and numerical results",
+      "rows": 129,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "ell",
+          "blank": 0,
+          "text": 0,
+          "finite": 129,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 128.0
+        },
+        {
+          "name": "theory_Cl_uK2",
+          "blank": 0,
+          "text": 0,
+          "finite": 129,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 1064.7171662281166
+        },
+        {
+          "name": "measured_fullsky_Cl_uK2",
+          "blank": 0,
+          "text": 0,
+          "finite": 129,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 482.02310567387894
+        },
+        {
+          "name": "beam_times_pixel_window",
+          "blank": 0,
+          "text": 0,
+          "finite": 129,
+          "nonfinite": 0,
+          "minimum": 5.284231664630858e-06,
+          "maximum": 1.000000000000032
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/fixed_power_correlation.csv",
+      "label": "Fixed power correlation",
+      "role": "Tables and numerical results",
+      "rows": 121,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "theta_deg",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": 60.0,
+          "maximum": 180.0
+        },
+        {
+          "name": "observed",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -213.22695387997285,
+          "maximum": 50.88238246768491
+        },
+        {
+          "name": "reference_mean",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -280.396312951013,
+          "maximum": 86.52485341910669
+        },
+        {
+          "name": "simultaneous_low",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -523.4712301646014,
+          "maximum": 5.017333931957012
+        },
+        {
+          "name": "simultaneous_high",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -37.321395737424666,
+          "maximum": 170.39711309858365
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/fixed_power_statistics.csv",
+      "label": "Fixed power statistics",
+      "role": "Tables and numerical results",
+      "rows": 6144,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "id",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 6143.0
+        },
+        {
+          "name": "split_0reference_1calibration_2validation",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 2.0
+        },
+        {
+          "name": "cut_sky_s_half",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 390.8555106493071,
+          "maximum": 20607.735425719453
+        },
+        {
+          "name": "masked_variance",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 1441.297045334354,
+          "maximum": 1940.594634102843
+        },
+        {
+          "name": "pseudo_parity",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.6448014798447312,
+          "maximum": 1.0106157884387328
+        },
+        {
+          "name": "hemisphere_max_contrast",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.049612118417345745,
+          "maximum": 0.41694633468982334
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/gaussian_correlation.csv",
+      "label": "Gaussian correlation",
+      "role": "Tables and numerical results",
+      "rows": 121,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "theta_deg",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": 60.0,
+          "maximum": 180.0
+        },
+        {
+          "name": "observed",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -213.22695387997285,
+          "maximum": 50.88238246768491
+        },
+        {
+          "name": "reference_mean",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -205.2967628022196,
+          "maximum": 264.1660202331234
+        },
+        {
+          "name": "simultaneous_low",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": -756.7757437111679,
+          "maximum": -138.73325495652085
+        },
+        {
+          "name": "simultaneous_high",
+          "blank": 0,
+          "text": 0,
+          "finite": 121,
+          "nonfinite": 0,
+          "minimum": 55.86553024381092,
+          "maximum": 1284.9632970295118
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/gaussian_statistics.csv",
+      "label": "Gaussian statistics",
+      "role": "Tables and numerical results",
+      "rows": 6144,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "id",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 6143.0
+        },
+        {
+          "name": "split_0reference_1calibration_2validation",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 2.0
+        },
+        {
+          "name": "cut_sky_s_half",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 366.7192198843459,
+          "maximum": 2049134.5065782485
+        },
+        {
+          "name": "masked_variance",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 1121.7008293056058,
+          "maximum": 4154.880593765278
+        },
+        {
+          "name": "pseudo_parity",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.624249060690523,
+          "maximum": 1.9224670723259067
+        },
+        {
+          "name": "hemisphere_max_contrast",
+          "blank": 0,
+          "text": 0,
+          "finite": 6144,
+          "nonfinite": 0,
+          "minimum": 0.06050706249156066,
+          "maximum": 0.49213580325203515
+        }
+      ]
+    },
+    {
+      "path": "results/conditional/injection_trials.csv",
+      "label": "Injection trials",
+      "role": "Tables and numerical results",
+      "rows": 1024,
+      "width_mismatches": 0,
+      "columns": [
+        {
+          "name": "id",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.0,
+          "maximum": 1023.0
+        },
+        {
+          "name": "contrast_A0.0",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.06058669733400778,
+          "maximum": 0.42160782937778507
+        },
+        {
+          "name": "contrast_A0.05",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.07282178703433599,
+          "maximum": 0.42267913185611616
+        },
+        {
+          "name": "contrast_A0.1",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.06621330984652424,
+          "maximum": 0.4572084999227645
+        },
+        {
+          "name": "contrast_A0.2",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.08802227695228486,
+          "maximum": 0.5291545062821261
+        },
+        {
+          "name": "contrast_A0.3",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 0.1216357407420668,
+          "maximum": 0.5931810968842121
+        },
+        {
+          "name": "axis_error_deg_A0.0",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 7.52877936550927,
+          "maximum": 87.21927593545648
+        },
+        {
+          "name": "axis_error_deg_A0.05",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 7.52877936550927,
+          "maximum": 87.21927593545648
+        },
+        {
+          "name": "axis_error_deg_A0.1",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 7.52877936550927,
+          "maximum": 87.21927593545648
+        },
+        {
+          "name": "axis_error_deg_A0.2",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 7.52877936550927,
+          "maximum": 87.21927593545648
+        },
+        {
+          "name": "axis_error_deg_A0.3",
+          "blank": 0,
+          "text": 0,
+          "finite": 1024,
+          "nonfinite": 0,
+          "minimum": 7.52877936550927,
+          "maximum": 87.21927593545648
+        }
+      ]
+    }
+  ],
+  "excluded": []
+}
