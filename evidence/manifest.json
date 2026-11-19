@@ -1,0 +1,522 @@
+{
+  "schema": 1,
+  "project": "Cosmic Microwave Background Analysis · CMB Anomaly Lab",
+  "repository": "https://github.com/Biswajit1999/cmb-anomaly-lab",
+  "files": [
+    {
+      "label": "Notes for data",
+      "path": "data/README.md",
+      "role": "Data and provenance",
+      "bytes": 3475,
+      "sha256": "593d9b71d105d94c26f9c97e8b674e83fa1f79f22ff20f0fa921c30db84d9c6f",
+      "hash_basis": "LF-normalised text",
+      "format": "MD"
+    },
+    {
+      "label": "Extension validation",
+      "path": "results/extension_validation.json",
+      "role": "Tables and numerical results",
+      "bytes": 2055,
+      "sha256": "6ae5ac6ec48d47013fa48f355281e5c0621fcba8723cbad28c249c4439dfaf30",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "status",
+        "source_hashes_verified",
+        "independent_seed",
+        "independent_maps",
+        "checks",
+        "numerical_convergence",
+        "scope"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Notebook execution",
+      "path": "results/notebook_execution.json",
+      "role": "Tables and numerical results",
+      "bytes": 585,
+      "sha256": "50022275b9b5bf25946cd4f3da25214bf5c232a37374f185e57711d284d2db07",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "author",
+        "executed_utc",
+        "python",
+        "analysis_revision",
+        "environment",
+        "real_data_sha256",
+        "spectral_samples"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Validation",
+      "path": "results/validation.json",
+      "role": "Tables and numerical results",
+      "bytes": 1552,
+      "sha256": "a1159ad2276afd53a1c157eb5b0f5b151cf39af5383d5feef6098e9ce1cfbcc6",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "status",
+        "source_and_input_hashes_verified",
+        "independent_seed",
+        "n_independent_spectra",
+        "checks",
+        "scope"
+      ],
+      "arrays": {}
+    },
+    {
+      "label": "Multipole replacement",
+      "path": "results/baseline/multipole_replacement.csv",
+      "role": "Tables and numerical results",
+      "bytes": 1134,
+      "sha256": "3bdb6de9c8c30f703ca528817e532600d72bb0214dbc35e854ef92b1832da016",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 63,
+      "columns": 2,
+      "headers": [
+        "ell",
+        "delta_S_half_uK4"
+      ],
+      "preview": [
+        [
+          "2",
+          "30377.5654095"
+        ],
+        [
+          "3",
+          "429.735100925"
+        ],
+        [
+          "4",
+          "-1467.44837353"
+        ],
+        [
+          "5",
+          "-162.747706191"
+        ]
+      ]
+    },
+    {
+      "label": "Results",
+      "path": "results/baseline/results.json",
+      "role": "Tables and numerical results",
+      "bytes": 13367,
+      "sha256": "086861c3a8decf9c1290e01205795bd626904c8c765d3b547b0125f93093ca3e",
+      "hash_basis": "LF-normalised text",
+      "format": "JSON",
+      "keys": [
+        "status",
+        "config",
+        "statistics",
+        "quadrupole_exact_p",
+        "four_test_family",
+        "spearman_correlation",
+        "conditioned_on_observed_C2"
+      ],
+      "arrays": {
+        "spearman_correlation": 4,
+        "sensitivity": 5
+      }
+    },
+    {
+      "label": "Spectrum",
+      "path": "results/baseline/spectrum.csv",
+      "role": "Tables and numerical results",
+      "bytes": 3968,
+      "sha256": "1c4173d067778e69bbacad7ce0ce08677a475ca275a8519186f2758cab5bd108",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 127,
+      "columns": 3,
+      "headers": [
+        "ell",
+        "observed_Cl_uK2",
+        "theory_Cl_uK2"
+      ],
+      "preview": [
+        [
+          "2",
+          "236.556690828",
+          "1064.71716623"
+        ],
+        [
+          "3",
+          "490.570164834",
+          "504.606277211"
+        ],
+        [
+          "4",
+          "217.472981534",
+          "286.704258841"
+        ],
+        [
+          "5",
+          "314.516359724",
+          "183.150034596"
+        ]
+      ]
+    },
+    {
+      "label": "Conditioning spectrum",
+      "path": "results/conditional/conditioning_spectrum.csv",
+      "role": "Tables and numerical results",
+      "bytes": 12966,
+      "sha256": "1a8af77ff8b8c9baf764a1b34395470a11e9823a6dee06493f8703ba7208ec04",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 129,
+      "columns": 4,
+      "headers": [
+        "ell",
+        "theory_Cl_uK2",
+        "measured_fullsky_Cl_uK2",
+        "beam_times_pixel_window"
+      ],
+      "preview": [
+        [
+          "0.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "1.000000000000031974e+00"
+        ],
+        [
+          "1.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "9.985367446612013476e-01"
+        ],
+        [
+          "2.000000000000000000e+00",
+          "1.064717166228116639e+03",
+          "2.104623373301517404e+02",
+          "9.956166500016903065e-01"
+        ],
+        [
+          "3.000000000000000000e+00",
+          "5.046062772110217338e+02",
+          "4.820231056738789448e+02",
+          "9.912525012217373588e-01"
+        ]
+      ]
+    },
+    {
+      "label": "Fixed power correlation",
+      "path": "results/conditional/fixed_power_correlation.csv",
+      "role": "Tables and numerical results",
+      "bytes": 15437,
+      "sha256": "8ca86d3cf2851c7d0e18b17b56060fbce023727ee489558ee9557dc6067b6ab1",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 121,
+      "columns": 5,
+      "headers": [
+        "theta_deg",
+        "observed",
+        "reference_mean",
+        "simultaneous_low",
+        "simultaneous_high"
+      ],
+      "preview": [
+        [
+          "6.000000000000000000e+01",
+          "-9.226338871239461525e+01",
+          "-1.126396541797790434e+02",
+          "-2.002568641962598122e+02",
+          "-2.502244416329828880e+01"
+        ],
+        [
+          "6.100000000000000000e+01",
+          "-8.633095951330831497e+01",
+          "-1.067198711724944360e+02",
+          "-1.939913659079519448e+02",
+          "-1.944837643703692720e+01"
+        ],
+        [
+          "6.200000000000000000e+01",
+          "-8.034188682137707360e+01",
+          "-1.009316007214200823e+02",
+          "-1.878861866114375800e+02",
+          "-1.397701483140258460e+01"
+        ],
+        [
+          "6.300000000000000000e+01",
+          "-7.422609559364040877e+01",
+          "-9.527965362569659646e+01",
+          "-1.819722510091937124e+02",
+          "-8.587056242199466283e+00"
+        ]
+      ]
+    },
+    {
+      "label": "Fixed power statistics",
+      "path": "results/conditional/fixed_power_statistics.csv",
+      "role": "Tables and numerical results",
+      "bytes": 921714,
+      "sha256": "7c587a06914fed200a5a6444ed80876149672cd01a04c1a8a0923fae54e11c93",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 6144,
+      "columns": 6,
+      "headers": [
+        "id",
+        "split_0reference_1calibration_2validation",
+        "cut_sky_s_half",
+        "masked_variance",
+        "pseudo_parity",
+        "hemisphere_max_contrast"
+      ],
+      "preview": [
+        [
+          "0.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "7.599934372319896283e+03",
+          "1.896415711569861969e+03",
+          "8.207901830152931621e-01",
+          "1.961558558755606974e-01"
+        ],
+        [
+          "1.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "6.823458604446866957e+03",
+          "1.742120688882002923e+03",
+          "7.456719753721035016e-01",
+          "2.079718085805607186e-01"
+        ],
+        [
+          "2.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "5.578679113526074616e+03",
+          "1.689410161592366876e+03",
+          "7.171523901143049828e-01",
+          "2.286143865183323798e-01"
+        ],
+        [
+          "3.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "5.955298787639599141e+03",
+          "1.732373438253212043e+03",
+          "7.759005643312734124e-01",
+          "1.235258316065103168e-01"
+        ]
+      ]
+    },
+    {
+      "label": "Gaussian correlation",
+      "path": "results/conditional/gaussian_correlation.csv",
+      "role": "Tables and numerical results",
+      "bytes": 15431,
+      "sha256": "05eba87032eda8e507499fb8acb870ef7804b6c0813bf9ca8b9a01d1355ec69c",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 121,
+      "columns": 5,
+      "headers": [
+        "theta_deg",
+        "observed",
+        "reference_mean",
+        "simultaneous_low",
+        "simultaneous_high"
+      ],
+      "preview": [
+        [
+          "6.000000000000000000e+01",
+          "-9.226338871239461525e+01",
+          "-1.834930245563151914e+02",
+          "-4.228515793564413343e+02",
+          "5.586553024381092314e+01"
+        ],
+        [
+          "6.100000000000000000e+01",
+          "-8.633095951330831497e+01",
+          "-1.872903624046434743e+02",
+          "-4.328095819593318083e+02",
+          "5.822885715004483131e+01"
+        ],
+        [
+          "6.200000000000000000e+01",
+          "-8.034188682137707360e+01",
+          "-1.907857557973822509e+02",
+          "-4.431463734195200459e+02",
+          "6.157486182475554415e+01"
+        ],
+        [
+          "6.300000000000000000e+01",
+          "-7.422609559364040877e+01",
+          "-1.939489890985529428e+02",
+          "-4.537028380629339495e+02",
+          "6.580485986582806390e+01"
+        ]
+      ]
+    },
+    {
+      "label": "Gaussian statistics",
+      "path": "results/conditional/gaussian_statistics.csv",
+      "role": "Tables and numerical results",
+      "bytes": 921714,
+      "sha256": "1ccf72db5eae5ff605c06ba6ad23340b54be9bac228ecf61f4a6c74a87ae2377",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 6144,
+      "columns": 6,
+      "headers": [
+        "id",
+        "split_0reference_1calibration_2validation",
+        "cut_sky_s_half",
+        "masked_variance",
+        "pseudo_parity",
+        "hemisphere_max_contrast"
+      ],
+      "preview": [
+        [
+          "0.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "3.124606744380641030e+05",
+          "2.483495911434920345e+03",
+          "1.529869744302150281e+00",
+          "1.579337031919254009e-01"
+        ],
+        [
+          "1.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "3.534401081060000433e+04",
+          "2.545812312487643339e+03",
+          "8.699992220755560224e-01",
+          "2.947219992238571673e-01"
+        ],
+        [
+          "2.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "8.654543152220133925e+04",
+          "2.038351957023066916e+03",
+          "1.219697586163593916e+00",
+          "1.082472402380250109e-01"
+        ],
+        [
+          "3.000000000000000000e+00",
+          "0.000000000000000000e+00",
+          "1.258824293790926458e+04",
+          "1.776640478711628248e+03",
+          "1.046299868217596796e+00",
+          "2.409973217784856792e-01"
+        ]
+      ]
+    },
+    {
+      "label": "Injection trials",
+      "path": "results/conditional/injection_trials.csv",
+      "role": "Tables and numerical results",
+      "bytes": 281775,
+      "sha256": "6f24ab9fa699a0e98d8ec25f964e8dab10e796f144a09ab3fe449bbd58dfd636",
+      "hash_basis": "LF-normalised text",
+      "format": "CSV",
+      "rows": 1024,
+      "columns": 11,
+      "headers": [
+        "id",
+        "contrast_A0.0",
+        "contrast_A0.05",
+        "contrast_A0.1",
+        "contrast_A0.2",
+        "contrast_A0.3",
+        "axis_error_deg_A0.0"
+      ],
+      "preview": [
+        [
+          "0.000000000000000000e+00",
+          "2.446822389717489554e-01",
+          "2.660558504727538187e-01",
+          "2.906704159396096276e-01",
+          "3.387462587708423567e-01",
+          "3.846298257735434323e-01",
+          "7.188629277462854361e+01"
+        ],
+        [
+          "1.000000000000000000e+00",
+          "3.505142636859564509e-01",
+          "3.384995635763522470e-01",
+          "3.263353282801916277e-01",
+          "3.109630103708191928e-01",
+          "3.262870629412377155e-01",
+          "8.129598047740373090e+01"
+        ],
+        [
+          "2.000000000000000000e+00",
+          "1.676742412370082203e-01",
+          "1.930405669540955771e-01",
+          "2.180055073578906211e-01",
+          "2.664005131424580508e-01",
+          "3.122428488435214367e-01",
+          "5.616473823201094717e+01"
+        ],
+        [
+          "3.000000000000000000e+00",
+          "1.885390922942604408e-01",
+          "1.523237848893336799e-01",
+          "1.663674430209053645e-01",
+          "2.470096535834652718e-01",
+          "3.244712928175443323e-01",
+          "3.944353569089876999e+01"
+        ]
+      ]
+    },
+    {
+      "label": "Notebook conditional maps",
+      "path": "results/conditional/notebook_conditional_maps.png",
+      "role": "Figures",
+      "bytes": 706646,
+      "sha256": "f3e9a9f426d0d20124d7fcc7544c8b9e10920cdbaa0322373fe8aa25bc69aa3e",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Notebook correlation",
+      "path": "results/maps/notebook_correlation.png",
+      "role": "Figures",
+      "bytes": 68965,
+      "sha256": "ecc4b051634a58053b384cc273b74ecda76a8cdc5477147bf97326de6207b239",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Planck blue orange masked",
+      "path": "results/maps/planck_blue_orange_masked.png",
+      "role": "Figures",
+      "bytes": 2675835,
+      "sha256": "90d721948c49f9c3070c2367021d8c971e56766a996509304443cb4874f45f73",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Planck fullsky",
+      "path": "results/maps/planck_fullsky.png",
+      "role": "Figures",
+      "bytes": 3138442,
+      "sha256": "d9ccc7a049864b3170879f1828ef7d01614299d4624b5f795bf84470f38b464b",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Planck temperature",
+      "path": "results/maps/planck_temperature.png",
+      "role": "Figures",
+      "bytes": 954714,
+      "sha256": "1835e66a38687956811d9efb272d85f95569d9952a556ce89d0d9ba8af25a2b0",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    },
+    {
+      "label": "Simulated skies",
+      "path": "results/maps/simulated_skies.png",
+      "role": "Figures",
+      "bytes": 1484941,
+      "sha256": "a1359f5feac8beb08eb5fac4dc583fbd3178c9a99c3cc12cfe1532fe756069df",
+      "hash_basis": "exact bytes",
+      "format": "PNG"
+    }
+  ]
+}

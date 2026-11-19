@@ -1,0 +1,101 @@
+{
+  "project": "Cosmic Microwave Background Analysis · CMB Anomaly Lab",
+  "repository": "https://github.com/Biswajit1999/cmb-anomaly-lab",
+  "files": [
+    {
+      "label": "Notes for data",
+      "path": "data/README.md",
+      "role": "Data and provenance"
+    },
+    {
+      "label": "Extension validation",
+      "path": "results/extension_validation.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Notebook execution",
+      "path": "results/notebook_execution.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Validation",
+      "path": "results/validation.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Multipole replacement",
+      "path": "results/baseline/multipole_replacement.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Results",
+      "path": "results/baseline/results.json",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Spectrum",
+      "path": "results/baseline/spectrum.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Conditioning spectrum",
+      "path": "results/conditional/conditioning_spectrum.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fixed power correlation",
+      "path": "results/conditional/fixed_power_correlation.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Fixed power statistics",
+      "path": "results/conditional/fixed_power_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Gaussian correlation",
+      "path": "results/conditional/gaussian_correlation.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Gaussian statistics",
+      "path": "results/conditional/gaussian_statistics.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Injection trials",
+      "path": "results/conditional/injection_trials.csv",
+      "role": "Tables and numerical results"
+    },
+    {
+      "label": "Notebook conditional maps",
+      "path": "results/conditional/notebook_conditional_maps.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Notebook correlation",
+      "path": "results/maps/notebook_correlation.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Planck blue orange masked",
+      "path": "results/maps/planck_blue_orange_masked.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Planck fullsky",
+      "path": "results/maps/planck_fullsky.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Planck temperature",
+      "path": "results/maps/planck_temperature.png",
+      "role": "Figures"
+    },
+    {
+      "label": "Simulated skies",
+      "path": "results/maps/simulated_skies.png",
+      "role": "Figures"
+    }
+  ]
+}
